@@ -106,7 +106,7 @@
     .form-input:focus {
         outline: none;
     }
-
+            
     .login-form label {
         display: block;
         font-weight: 700;
