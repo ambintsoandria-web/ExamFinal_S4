@@ -43,13 +43,16 @@
         <div class="nav-right">
             <div class="nav-user">
                 <div class="avatar">
-                    <?= substr(session()->get('nom') ?? 'OP', 0, 2) ?>
+                    <?= esc(strtoupper(substr(session('auth_nom') ?? 'OP', 0, 2))) ?>
                 </div>
-                <span><?= session()->get('nom') ?? 'Opérateur' ?></span>
+                <span><?= esc(session('auth_nom') ?? 'Opérateur') ?></span>
             </div>
-            <a href="<?= base_url('logout') ?>" class="logout-btn">
-                <i class="bi bi-box-arrow-right"></i>
-            </a>
+            <form action="<?= site_url('deconnexion') ?>" method="post" class="logout-form">
+                <?= csrf_field() ?>
+                <button type="submit" class="logout-btn" aria-label="Se déconnecter" title="Se déconnecter">
+                    <i class="bi bi-box-arrow-right"></i>
+                </button>
+            </form>
         </div>
     </nav>
 
@@ -60,7 +63,7 @@
         <div class="sidebar-label">Menu principal</div>
         <ul class="sidebar-menu">
             <li>
-                <a href="<?= base_url('operateur/prefixes') ?>"
+                <a href="<?= site_url('operateur/prefixes') ?>"
                     class="<?= ($active ?? '') == 'prefixes' ? 'active' : '' ?>">
                     <i class="bi bi-hash"></i>
                     Préfixes
@@ -101,30 +104,32 @@
      ============================================ -->
     <div class="main-content">
         <div class="page-content">
+            <?= $this->renderSection('content') ?>
+        </div>
+    </div>
 
-            <!-- ============================================
-             JAVASCRIPT (toggle sidebar)
-             ============================================ -->
-            <script>
-                const sidebar = document.getElementById('sidebar');
-                const overlay = document.getElementById('sidebarOverlay');
-                const toggleBtn = document.getElementById('sidebarToggle');
+    <?= $this->include('layout/footer') ?>
 
-                function toggleSidebar() {
-                    sidebar.classList.toggle('open');
-                    overlay.classList.toggle('active');
+    <script>
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('sidebarOverlay');
+        const toggleBtn = document.getElementById('sidebarToggle');
+
+        function toggleSidebar() {
+            sidebar.classList.toggle('open');
+            overlay.classList.toggle('active');
+        }
+
+        toggleBtn.addEventListener('click', toggleSidebar);
+        overlay.addEventListener('click', toggleSidebar);
+        document.querySelectorAll('.sidebar-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 992) {
+                    sidebar.classList.remove('open');
+                    overlay.classList.remove('active');
                 }
-
-                toggleBtn.addEventListener('click', toggleSidebar);
-                overlay.addEventListener('click', toggleSidebar);
-
-                // Fermer la sidebar quand on clique sur un lien (mobile)
-                document.querySelectorAll('.sidebar-menu a').forEach(link => {
-                    link.addEventListener('click', () => {
-                        if (window.innerWidth <= 992) {
-                            sidebar.classList.remove('open');
-                            overlay.classList.remove('active');
-                        }
-                    });
-                });
-            </script>
+            });
+        });
+    </script>
+</body>
+</html>

@@ -349,3 +349,16 @@ in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
 12 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
 13 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
 14 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinal_S4/public/index.php')
+CRITICAL - 2026-07-20 06:38:00 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "Operateur/prefixe.php"
+[Method: GET, Route: operateur/goToprefixe]
+in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
+ 1 SYSTEMPATH/View/View.php(228): CodeIgniter\Exceptions\FrameworkException::forInvalidFile()
+ 2 SYSTEMPATH/Common.php(1254): CodeIgniter\View\View->render()
+ 3 APPPATH/Controllers/OperateurController.php(19): view()
+ 4 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\OperateurController->goToPrefixe()
+ 5 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 6 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 7 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+10 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinal_S4/public/index.php')
