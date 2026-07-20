@@ -12,4 +12,21 @@ class PrefixeModel extends Model
     protected $allowedFields = [
         'prefix'
     ];
+    public function isNumeroValide($numero)
+    {
+        if (strlen($numero) !== 10) {
+            return false;
+        }
+
+        $prefixes = $this->findAll();
+
+        foreach ($prefixes as $prefixe) {
+            if (strpos($numero, $prefixe['prefix']) === 0) {
+                return true;
+            }
+        }
+
+        return false;
+    }
 }
+
