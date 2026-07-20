@@ -1,7 +1,6 @@
 <?= $this->extend('layout/navbar') ?>
 <?= $this->section('content') ?>
 
-<link rel="stylesheet" href="<?=  base_url('assets/css/operateur.css') ?>">
 <div class="auth-page frais-page">
     <div class="auth-shell frais-shell">
 
@@ -19,7 +18,7 @@
             </div>
         <?php endif; ?>
 
-        <div class="login-box" style="max-width: 100%; width: 100%;">
+        <div class="login-box full-width">
 
             <div class="login-icon">
                 <i class="bi bi-cash-stack"></i>

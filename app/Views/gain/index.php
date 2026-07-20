@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="<?= base_url('assets/css/gains.css') ?>">
     <div class="auth-shell auth-shell-lg">
 
-        <div class="login-box" style="max-width: 100%; width: 100%;">
+        <div class="login-box full-width">
 
             <div class="login-icon">
                 <i class="bi bi-graph-up-arrow"></i>
@@ -62,7 +62,7 @@
                                     <tr>
                                         <td>
                                             <span class="gains-type">
-                                                <i class="bi <?= $icon ?>" style="color: <?= $color ?>;"></i>
+                                                <i class="bi <?= $icon ?> gain-icon gain-icon-<?= esc($typeNom) ?>"></i>
                                                 <?= esc(ucfirst($typeNom)) ?>
                                             </span>
                                             <span class="gains-percentage"><?= $percentage ?>%</span>
@@ -72,10 +72,7 @@
                                                 <?= number_format($totalGain, 0, ',', ' ') ?> Ar
                                             </span>
                                             <!-- Barre de progression -->
-                                            <div class="gains-bar-wrapper">
-                                                <div class="gains-bar"
-                                                    style="width: <?= $percentage ?>%; background: <?= $color ?>;"></div>
-                                            </div>
+                                            <div class="gains-bar-wrapper"><div class="gains-bar gain-bar-<?= esc($typeNom) ?>"></div></div>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>
@@ -102,9 +99,5 @@
         </div>
     </div>
 </div>
-
-<style>
-
-</style>
 
 <?= $this->endSection() ?>

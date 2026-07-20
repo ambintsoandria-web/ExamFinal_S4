@@ -3,7 +3,6 @@ namespace App\Models;
 use CodeIgniter\Model;
 class ClientSoldeHistorique extends Model
 {
-    
     protected $table = 'client_solde_historique';
     protected $primaryKey = 'id';
     protected $useTimestamps = false;

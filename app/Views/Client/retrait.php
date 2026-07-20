@@ -4,8 +4,8 @@
     <a class="deposit-back" href="<?= site_url('client/espace') ?>"><i class="bi bi-arrow-left"></i> Retour au
         compte</a>
     <section class="deposit-card">
-        <div class="deposit-icon"><i class="bi bi-arrow-down"></i></div>
-        <span class="page-kicker">Approvisionner mon compte</span>
+        <div class="deposit-icon withdraw-icon"><i class="bi bi-arrow-up"></i></div>
+        <span class="page-kicker">Retirer de mon compte</span>
         <h1>Faire un Retrait</h1>
         <p class="deposit-lead">Indiquez le montant à débiter à votre solde.</p>
         <?php if (session('erreur')): ?>
@@ -19,7 +19,7 @@
                 <span>Ar</span>
             </div>
             <small>Minimum 100 Ar</small>
-            <button type="submit" class="deposit-button">Confirmer le dépôt <i class="bi bi-arrow-right"></i></button>
+            <button type="submit" class="deposit-button">Confirmer le retrait <i class="bi bi-arrow-right"></i></button>
         </form>
     </section>
 </div>

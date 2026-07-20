@@ -1,13 +1,5 @@
 
-<footer style="
-    background: #fff;
-    border-top: 1px solid var(--line);
-    padding: 16px 32px;
-    margin-left: var(--sidebar-width);
-    text-align: center;
-    font-size: 13px;
-    color: var(--muted);
-">
+<footer class="app-footer">
     &copy; <?= date('Y') ?> Mobile Money. Tous droits réservés.
 </footer>
 

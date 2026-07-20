@@ -1,32 +1,17 @@
 <?= $this->extend('layout/navbar') ?>
 <?= $this->section('content') ?>
-
-<?php if (session('succes')): ?>
-    <div class="prefix-alert prefix-alert-success"><?= esc(session('succes')) ?></div>
-<?php endif; ?>
-
-
-<!doctype html>
-<html lang="fr">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Mon espace | Vola</title>
-    <link rel="stylesheet" href="<?= base_url('assets/css/login.css') ?>">
-</head>
-
-<body class="dashboard-page">
-    <main class="dashboard-card"><span class="brand dark-brand"><span class="brand-mark">V</span>Vola</span>
-        <p class="section-label">Espace client</p>
-        <h1>Bonjour, <?= esc($client['nom']) ?></h1>
-        <p>Votre solde disponible</p><strong class="balance"><?= number_format((float) $client['solde'], 0, ',', ' ') ?>
-            Ar</strong>
-        <p class="account-number"><?= esc($client['telephone']) ?></p>
-        <form action="<?= site_url('deconnexion') ?>" method="post"><?= csrf_field() ?><button class="primary-button"
-                type="submit">Se déconnecter</button></form>
-    </main>
-</body>
-
-</html>
+<?php if (session('succes')): ?><div class="app-alert app-alert-success"><i class="bi bi-check-circle"></i><?= esc(session('succes')) ?></div><?php endif; ?>
+<section class="welcome-panel">
+    <div class="welcome-copy"><span class="page-kicker">Espace client</span><h1>Bonjour, <?= esc($client['nom']) ?></h1><p>Gérez votre argent simplement et en toute sécurité.</p></div>
+    <div class="welcome-symbol"><i class="bi bi-wallet2"></i></div>
+</section>
+<section class="balance-panel">
+    <div><span>Solde disponible</span><strong><?= number_format((float) $client['solde'], 0, ',', ' ') ?> <small>Ar</small></strong><p><i class="bi bi-phone"></i><?= esc($client['telephone']) ?></p></div>
+    <span class="balance-decoration"></span>
+</section>
+<div class="quick-grid">
+    <a href="<?= site_url('client/depot') ?>" class="quick-action quick-deposit"><i class="bi bi-arrow-down"></i><span><b>Déposer</b><small>Ajouter de l’argent</small></span><i class="bi bi-chevron-right"></i></a>
+    <a href="<?= site_url('client/retrait') ?>" class="quick-action quick-withdraw"><i class="bi bi-arrow-up"></i><span><b>Retirer</b><small>Retirer de l’argent</small></span><i class="bi bi-chevron-right"></i></a>
+    <a href="<?= site_url('client/transfert') ?>" class="quick-action quick-transfer"><i class="bi bi-arrow-left-right"></i><span><b>Transférer</b><small>Envoyer à un client</small></span><i class="bi bi-chevron-right"></i></a>
+</div>
 <?= $this->endSection() ?>

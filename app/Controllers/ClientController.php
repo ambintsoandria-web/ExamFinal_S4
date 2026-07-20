@@ -122,7 +122,6 @@ class ClientController extends BaseController
         return view('Client/transfert', ['title' => 'Faire un transfert', 'active' => 'transfert']);
     }
 
-
     public function login()
     {
         if (session('auth_type') === 'client') {
