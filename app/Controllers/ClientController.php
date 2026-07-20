@@ -3,20 +3,22 @@
 namespace App\Controllers;
 
 use App\Models\ClientModel;
-use App\Models\TransactionModel;
+use App\Models\TransactionsModel;
 use App\Models\ClientSoldeHistorique;
 
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 class ClientController extends BaseController
 {
     protected ClientModel $clientModel;
-    public TransactionModel $transactionModel;
+    public TransactionsModel $transactionModel;
     public ClientSoldeHistorique $clientSoldeHistorique;
 
 
     public function __construct()
     {
         $this->clientModel = new ClientModel();
-        $this->transactionModel = new TransactionModel();
+        $this->transactionModel = new TransactionsModel();
         $this->clientSoldeHistorique = new ClientSoldeHistorique();
     }
 

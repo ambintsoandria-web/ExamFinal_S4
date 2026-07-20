@@ -32,8 +32,4 @@ class FraisModel extends Model
     {
         return $this->find($fraisId);
     }
-    public function deleteFrais($fraisId)
-    {
-        return $this->delete($fraisId);
-    }
 }

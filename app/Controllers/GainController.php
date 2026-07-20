@@ -1,7 +1,13 @@
 <?php
     namespace App\Controllers;
 
-    public class GainController extends BaseController
+    use App\Models\TransactionsModel;
+    use App\Models\FraisModel;
+    use App\Models\TypeOperationModel;
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
+
+    class GainController extends BaseController
     {
         public $transactionModel;
         public $fraisModel;
@@ -9,9 +15,9 @@
 
         public function __construct()
         {
-            $this->transactionModel = new \App\Models\TransactionModel();
-            $this->fraisModel = new \App\Models\FraisModel();
-            $this->typeOperationModel = new \App\Models\TypeOperationModel();
+            $this->transactionModel = new TransactionsModel();
+            $this->fraisModel = new FraisModel();
+            $this->typeOperationModel = new TypeOperationModel();
         }
         public function index()
         {

@@ -495,3 +495,619 @@ in SYSTEMPATH\Database\Database.php on line 186.
  9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\public\\index.php')
+CRITICAL - 2026-07-20 07:48:12 --> CodeIgniter\Exceptions\CriticalError: The required PHP extension "sqlite3" is not loaded. Install and enable it to use "SQLite3" driver.
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\Database.php on line 186.
+ 1 SYSTEMPATH\Database\Database.php(59): CodeIgniter\Database\Database->checkDbExtension('SQLite3')
+ 2 SYSTEMPATH\Database\Config.php(82): CodeIgniter\Database\Database->load([...], 'default')
+ 3 SYSTEMPATH\Model.php(152): CodeIgniter\Database\Config::connect('default')
+ 4 APPPATH\Controllers\ClientController.php(18): CodeIgniter\Model->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\ClientController->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\public\\index.php')
+CRITICAL - 2026-07-20 07:49:47 --> CodeIgniter\Exceptions\CriticalError: The required PHP extension "sqlite3" is not loaded. Install and enable it to use "SQLite3" driver.
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\Database.php on line 186.
+ 1 SYSTEMPATH\Database\Database.php(59): CodeIgniter\Database\Database->checkDbExtension('SQLite3')
+ 2 SYSTEMPATH\Database\Config.php(82): CodeIgniter\Database\Database->load([...], 'default')
+ 3 SYSTEMPATH\Model.php(152): CodeIgniter\Database\Config::connect('default')
+ 4 APPPATH\Controllers\ClientController.php(20): CodeIgniter\Model->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\ClientController->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\public\\index.php')
+CRITICAL - 2026-07-20 07:50:59 --> Error: Class "App\Models\TransactionModel" not found
+[Method: GET, Route: /]
+in APPPATH\Controllers\ClientController.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\ClientController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\public\\index.php')
+CRITICAL - 2026-07-20 07:51:51 --> Error: Class "App\Models\TransactionsModel" not found
+[Method: GET, Route: /]
+in APPPATH\Controllers\ClientController.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\ClientController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\public\\index.php')
+CRITICAL - 2026-07-20 07:52:28 --> ParseError: syntax error, unexpected token "public", expecting end of file
+[Method: GET, Route: /]
+in APPPATH\Models\ClientSoldeHistorique.php on line 5.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(320): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\app\\Models\\ClientSoldeHistorique.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\ClientSoldeHistorique')
+ 3 APPPATH\Controllers\ClientController.php(22): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\ClientSoldeHistorique')
+ 4 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\ClientController->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\public\\index.php')
+CRITICAL - 2026-07-20 07:53:05 --> ParseError: syntax error, unexpected token "public", expecting end of file
+[Method: GET, Route: /]
+in APPPATH\Models\ClientSoldeHistorique.php on line 5.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(320): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\app\\Models\\ClientSoldeHistorique.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\ClientSoldeHistorique')
+ 3 APPPATH\Controllers\ClientController.php(22): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\ClientSoldeHistorique')
+ 4 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\ClientController->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\public\\index.php')
+CRITICAL - 2026-07-20 07:57:47 --> ErrorException: Cannot redeclare App\Models\FraisModel::deleteFrais()
+[Method: GET, Route: operateur/frais]
+in APPPATH\Models\FraisModel.php on line 35.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2026-07-20 07:58:20 --> Unable to prepare statement: no such table: client_solde_historique
+in SYSTEMPATH\Database\SQLite3\Connection.php on line 164.
+ 1 SYSTEMPATH\Database\SQLite3\Connection.php(164): SQLite3->query('SELECT *
+FROM `client_solde_historique`
+WHERE `client_id` = 1
+AND `date_modification` < \'2026-07-20 07:58:20\'
+ORDER BY `date_modification` DESC
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\SQLite3\Connection->execute('SELECT *
+FROM `client_solde_historique`
+WHERE `client_id` = 1
+AND `date_modification` < \'2026-07-20 07:58:20\'
+ORDER BY `date_modification` DESC
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `client_solde_historique`
+WHERE `client_id` = 1
+AND `date_modification` < \'2026-07-20 07:58:20\'
+ORDER BY `date_modification` DESC
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `client_solde_historique`
+WHERE `client_id` = :client_id:
+AND `date_modification` < :date_modification:
+ORDER BY `date_modification` DESC
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\ClientSoldeHistorique.php(22): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\ClientController.php(75): App\Models\ClientSoldeHistorique->getSoldebyClient(1, '2026-07-20 07:58:20')
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\ClientController->getSituationClients()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientController))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\public\\index.php')
+CRITICAL - 2026-07-20 07:58:20 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: client_solde_historique
+[Method: GET, Route: operateur/clients]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `client_solde_historique`
+WHERE `client_id` = :client_id:
+AND `date_modification` < :date_modification:
+ORDER BY `date_modification` DESC
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\ClientSoldeHistorique.php(22): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\ClientController.php(75): App\Models\ClientSoldeHistorique->getSoldebyClient(1, '2026-07-20 07:58:20')
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\ClientController->getSituationClients()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\public\\index.php')
+CRITICAL - 2026-07-20 07:58:20 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: client_solde_historique
+in SYSTEMPATH\Database\SQLite3\Connection.php on line 174.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\SQLite3\Connection->execute('SELECT *
+FROM `client_solde_historique`
+WHERE `client_id` = 1
+AND `date_modification` < \'2026-07-20 07:58:20\'
+ORDER BY `date_modification` DESC
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `client_solde_historique`
+WHERE `client_id` = 1
+AND `date_modification` < \'2026-07-20 07:58:20\'
+ORDER BY `date_modification` DESC
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `client_solde_historique`
+WHERE `client_id` = :client_id:
+AND `date_modification` < :date_modification:
+ORDER BY `date_modification` DESC
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Models\ClientSoldeHistorique.php(22): CodeIgniter\BaseModel->first()
+ 7 APPPATH\Controllers\ClientController.php(75): App\Models\ClientSoldeHistorique->getSoldebyClient(1, '2026-07-20 07:58:20')
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\ClientController->getSituationClients()
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientController))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\public\\index.php')
+CRITICAL - 2026-07-20 07:58:20 --> [Caused by] SQLite3Exception: Unable to prepare statement: no such table: client_solde_historique
+in SYSTEMPATH\Database\SQLite3\Connection.php on line 164.
+ 1 SYSTEMPATH\Database\SQLite3\Connection.php(164): SQLite3->query('SELECT *
+FROM `client_solde_historique`
+WHERE `client_id` = 1
+AND `date_modification` < \'2026-07-20 07:58:20\'
+ORDER BY `date_modification` DESC
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\SQLite3\Connection->execute('SELECT *
+FROM `client_solde_historique`
+WHERE `client_id` = 1
+AND `date_modification` < \'2026-07-20 07:58:20\'
+ORDER BY `date_modification` DESC
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `client_solde_historique`
+WHERE `client_id` = 1
+AND `date_modification` < \'2026-07-20 07:58:20\'
+ORDER BY `date_modification` DESC
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `client_solde_historique`
+WHERE `client_id` = :client_id:
+AND `date_modification` < :date_modification:
+ORDER BY `date_modification` DESC
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\ClientSoldeHistorique.php(22): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\ClientController.php(75): App\Models\ClientSoldeHistorique->getSoldebyClient(1, '2026-07-20 07:58:20')
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\ClientController->getSituationClients()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientController))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\public\\index.php')
+CRITICAL - 2026-07-20 07:58:54 --> ErrorException: Cannot redeclare App\Models\FraisModel::deleteFrais()
+[Method: GET, Route: operateur/frais]
+in APPPATH\Models\FraisModel.php on line 35.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2026-07-20 07:58:57 --> Unable to prepare statement: no such table: client_solde_historique
+in SYSTEMPATH\Database\SQLite3\Connection.php on line 164.
+ 1 SYSTEMPATH\Database\SQLite3\Connection.php(164): SQLite3->query('SELECT *
+FROM `client_solde_historique`
+WHERE `client_id` = 1
+AND `date_modification` < \'2026-07-20 07:58:57\'
+ORDER BY `date_modification` DESC
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\SQLite3\Connection->execute('SELECT *
+FROM `client_solde_historique`
+WHERE `client_id` = 1
+AND `date_modification` < \'2026-07-20 07:58:57\'
+ORDER BY `date_modification` DESC
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `client_solde_historique`
+WHERE `client_id` = 1
+AND `date_modification` < \'2026-07-20 07:58:57\'
+ORDER BY `date_modification` DESC
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `client_solde_historique`
+WHERE `client_id` = :client_id:
+AND `date_modification` < :date_modification:
+ORDER BY `date_modification` DESC
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\ClientSoldeHistorique.php(22): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\ClientController.php(75): App\Models\ClientSoldeHistorique->getSoldebyClient(1, '2026-07-20 07:58:57')
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\ClientController->getSituationClients()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientController))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\public\\index.php')
+CRITICAL - 2026-07-20 07:58:57 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: client_solde_historique
+[Method: GET, Route: operateur/clients]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `client_solde_historique`
+WHERE `client_id` = :client_id:
+AND `date_modification` < :date_modification:
+ORDER BY `date_modification` DESC
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\ClientSoldeHistorique.php(22): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\ClientController.php(75): App\Models\ClientSoldeHistorique->getSoldebyClient(1, '2026-07-20 07:58:57')
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\ClientController->getSituationClients()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\public\\index.php')
+CRITICAL - 2026-07-20 07:58:57 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: client_solde_historique
+in SYSTEMPATH\Database\SQLite3\Connection.php on line 174.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\SQLite3\Connection->execute('SELECT *
+FROM `client_solde_historique`
+WHERE `client_id` = 1
+AND `date_modification` < \'2026-07-20 07:58:57\'
+ORDER BY `date_modification` DESC
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `client_solde_historique`
+WHERE `client_id` = 1
+AND `date_modification` < \'2026-07-20 07:58:57\'
+ORDER BY `date_modification` DESC
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `client_solde_historique`
+WHERE `client_id` = :client_id:
+AND `date_modification` < :date_modification:
+ORDER BY `date_modification` DESC
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Models\ClientSoldeHistorique.php(22): CodeIgniter\BaseModel->first()
+ 7 APPPATH\Controllers\ClientController.php(75): App\Models\ClientSoldeHistorique->getSoldebyClient(1, '2026-07-20 07:58:57')
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\ClientController->getSituationClients()
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientController))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\public\\index.php')
+CRITICAL - 2026-07-20 07:58:57 --> [Caused by] SQLite3Exception: Unable to prepare statement: no such table: client_solde_historique
+in SYSTEMPATH\Database\SQLite3\Connection.php on line 164.
+ 1 SYSTEMPATH\Database\SQLite3\Connection.php(164): SQLite3->query('SELECT *
+FROM `client_solde_historique`
+WHERE `client_id` = 1
+AND `date_modification` < \'2026-07-20 07:58:57\'
+ORDER BY `date_modification` DESC
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\SQLite3\Connection->execute('SELECT *
+FROM `client_solde_historique`
+WHERE `client_id` = 1
+AND `date_modification` < \'2026-07-20 07:58:57\'
+ORDER BY `date_modification` DESC
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `client_solde_historique`
+WHERE `client_id` = 1
+AND `date_modification` < \'2026-07-20 07:58:57\'
+ORDER BY `date_modification` DESC
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `client_solde_historique`
+WHERE `client_id` = :client_id:
+AND `date_modification` < :date_modification:
+ORDER BY `date_modification` DESC
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\ClientSoldeHistorique.php(22): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\ClientController.php(75): App\Models\ClientSoldeHistorique->getSoldebyClient(1, '2026-07-20 07:58:57')
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\ClientController->getSituationClients()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientController))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\public\\index.php')
+CRITICAL - 2026-07-20 08:00:21 --> ParseError: syntax error, unexpected token "public", expecting end of file
+[Method: GET, Route: operateur/gains]
+in APPPATH\Controllers\GainController.php on line 4.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(320): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\app\\Controllers\\GainController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\GainController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\GainController')
+ 4 SYSTEMPATH\Router\Router.php(790): class_exists('\\App\\Controllers\\GainController')
+ 5 SYSTEMPATH\Router\Router.php(228): CodeIgniter\Router\Router->processRouteAttributes()
+ 6 SYSTEMPATH\CodeIgniter.php(852): CodeIgniter\Router\Router->handle('operateur/gains')
+ 7 SYSTEMPATH\CodeIgniter.php(464): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\public\\index.php')
+CRITICAL - 2026-07-20 08:00:45 --> ParseError: syntax error, unexpected token "public", expecting end of file
+[Method: GET, Route: operateur/gains]
+in APPPATH\Controllers\GainController.php on line 5.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(320): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\app\\Controllers\\GainController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\GainController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\GainController')
+ 4 SYSTEMPATH\Router\Router.php(790): class_exists('\\App\\Controllers\\GainController')
+ 5 SYSTEMPATH\Router\Router.php(228): CodeIgniter\Router\Router->processRouteAttributes()
+ 6 SYSTEMPATH\CodeIgniter.php(852): CodeIgniter\Router\Router->handle('operateur/gains')
+ 7 SYSTEMPATH\CodeIgniter.php(464): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\public\\index.php')
+CRITICAL - 2026-07-20 08:00:47 --> ParseError: syntax error, unexpected token "public", expecting end of file
+[Method: GET, Route: operateur/gains]
+in APPPATH\Controllers\GainController.php on line 5.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(320): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\app\\Controllers\\GainController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\GainController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\GainController')
+ 4 SYSTEMPATH\Router\Router.php(790): class_exists('\\App\\Controllers\\GainController')
+ 5 SYSTEMPATH\Router\Router.php(228): CodeIgniter\Router\Router->processRouteAttributes()
+ 6 SYSTEMPATH\CodeIgniter.php(852): CodeIgniter\Router\Router->handle('operateur/gains')
+ 7 SYSTEMPATH\CodeIgniter.php(464): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\public\\index.php')
+CRITICAL - 2026-07-20 08:01:26 --> Error: Class "App\Models\TransactionModel" not found
+[Method: GET, Route: operateur/gains]
+in APPPATH\Controllers\GainController.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\GainController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\public\\index.php')
+CRITICAL - 2026-07-20 08:02:54 --> ErrorException: Cannot redeclare App\Models\FraisModel::deleteFrais()
+[Method: GET, Route: operateur/gains]
+in APPPATH\Models\FraisModel.php on line 35.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-20 08:03:52 --> Error: Class "App\Models\TypeOperationModel" not found
+[Method: GET, Route: operateur/gains]
+in APPPATH\Controllers\GainController.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\GainController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\public\\index.php')
+CRITICAL - 2026-07-20 08:05:08 --> Error: Class "App\Models\TypeOperations" not found
+[Method: GET, Route: operateur/gains]
+in APPPATH\Controllers\GainController.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\GainController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\public\\index.php')
+CRITICAL - 2026-07-20 08:06:19 --> Error: Class "App\Controllers\TypeOperationModel" not found
+[Method: GET, Route: operateur/gains]
+in APPPATH\Controllers\GainController.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\GainController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\public\\index.php')
+CRITICAL - 2026-07-20 08:08:35 --> Error: Class "App\Models\TypeOperationModel" not found
+[Method: GET, Route: operateur/gains]
+in APPPATH\Controllers\GainController.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\GainController->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 6 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+ 7 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\public\\index.php')
+CRITICAL - 2026-07-20 08:11:59 --> ErrorException: Undefined variable $gainsParTypeOperation
+[Method: GET, Route: operateur/gains]
+in APPPATH\Views\gain\index.php on line 14.
+ 1 APPPATH\Views\gain\index.php(14): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $gainsParTypeOperation', 'C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\app\\Views\\gain\\index.php', 14)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\app\\Views\\gain\\index.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('gain/index', [], true)
+ 5 APPPATH\Controllers\GainController.php(34): view('gain/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\GainController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GainController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\public\\index.php')
+CRITICAL - 2026-07-20 08:13:16 --> ErrorException: Undefined array key "type_operation"
+[Method: GET, Route: operateur/gains]
+in APPPATH\Views\gain\index.php on line 16.
+ 1 APPPATH\Views\gain\index.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "type_operation"', 'C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\app\\Views\\gain\\index.php', 16)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\app\\Views\\gain\\index.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('gain/index', [], true)
+ 5 APPPATH\Controllers\GainController.php(34): view('gain/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\GainController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GainController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\public\\index.php')
+CRITICAL - 2026-07-20 08:14:24 --> ErrorException: Undefined array key "nom"
+[Method: GET, Route: operateur/gains]
+in APPPATH\Views\gain\index.php on line 16.
+ 1 APPPATH\Views\gain\index.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "nom"', 'C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\app\\Views\\gain\\index.php', 16)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\app\\Views\\gain\\index.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('gain/index', [], true)
+ 5 APPPATH\Controllers\GainController.php(34): view('gain/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\GainController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GainController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\public\\index.php')
+CRITICAL - 2026-07-20 08:15:46 --> ErrorException: Array to string conversion
+[Method: GET, Route: operateur/gains]
+in APPPATH\Views\gain\index.php on line 17.
+ 1 APPPATH\Views\gain\index.php(17): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\app\\Views\\gain\\index.php', 17)
+ 2 SYSTEMPATH\View\View.php(240): include('C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\app\\Views\\gain\\index.php')
+ 3 SYSTEMPATH\View\View.php(243): CodeIgniter\View\View->{closure:CodeIgniter\View\View::render():237}()
+ 4 SYSTEMPATH\Common.php(1254): CodeIgniter\View\View->render('gain/index', [], true)
+ 5 APPPATH\Controllers\GainController.php(34): view('gain/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\GainController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\GainController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\public\\index.php')
+ERROR - 2026-07-20 08:18:08 --> Unable to prepare statement: no such table: client_solde_historique
+in SYSTEMPATH\Database\SQLite3\Connection.php on line 164.
+ 1 SYSTEMPATH\Database\SQLite3\Connection.php(164): SQLite3->query('SELECT *
+FROM `client_solde_historique`
+WHERE `client_id` = 1
+AND `date_modification` < \'2026-07-20 08:18:08\'
+ORDER BY `date_modification` DESC
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\SQLite3\Connection->execute('SELECT *
+FROM `client_solde_historique`
+WHERE `client_id` = 1
+AND `date_modification` < \'2026-07-20 08:18:08\'
+ORDER BY `date_modification` DESC
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `client_solde_historique`
+WHERE `client_id` = 1
+AND `date_modification` < \'2026-07-20 08:18:08\'
+ORDER BY `date_modification` DESC
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `client_solde_historique`
+WHERE `client_id` = :client_id:
+AND `date_modification` < :date_modification:
+ORDER BY `date_modification` DESC
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\ClientSoldeHistorique.php(22): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\ClientController.php(75): App\Models\ClientSoldeHistorique->getSoldebyClient(1, '2026-07-20 08:18:08')
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\ClientController->getSituationClients()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientController))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\public\\index.php')
+CRITICAL - 2026-07-20 08:18:08 --> CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: client_solde_historique
+[Method: GET, Route: operateur/clients]
+in SYSTEMPATH\Database\BaseConnection.php on line 863.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `client_solde_historique`
+WHERE `client_id` = :client_id:
+AND `date_modification` < :date_modification:
+ORDER BY `date_modification` DESC
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 4 APPPATH\Models\ClientSoldeHistorique.php(22): CodeIgniter\BaseModel->first()
+ 5 APPPATH\Controllers\ClientController.php(75): App\Models\ClientSoldeHistorique->getSoldebyClient(1, '2026-07-20 08:18:08')
+ 6 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\ClientController->getSituationClients()
+ 7 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientController))
+ 8 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\public\\index.php')
+CRITICAL - 2026-07-20 08:18:08 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: client_solde_historique
+in SYSTEMPATH\Database\SQLite3\Connection.php on line 174.
+ 1 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\SQLite3\Connection->execute('SELECT *
+FROM `client_solde_historique`
+WHERE `client_id` = 1
+AND `date_modification` < \'2026-07-20 08:18:08\'
+ORDER BY `date_modification` DESC
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `client_solde_historique`
+WHERE `client_id` = 1
+AND `date_modification` < \'2026-07-20 08:18:08\'
+ORDER BY `date_modification` DESC
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `client_solde_historique`
+WHERE `client_id` = :client_id:
+AND `date_modification` < :date_modification:
+ORDER BY `date_modification` DESC
+ LIMIT 1', [...], false)
+ 4 SYSTEMPATH\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 6 APPPATH\Models\ClientSoldeHistorique.php(22): CodeIgniter\BaseModel->first()
+ 7 APPPATH\Controllers\ClientController.php(75): App\Models\ClientSoldeHistorique->getSoldebyClient(1, '2026-07-20 08:18:08')
+ 8 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\ClientController->getSituationClients()
+ 9 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientController))
+10 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+14 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\public\\index.php')
+CRITICAL - 2026-07-20 08:18:08 --> [Caused by] SQLite3Exception: Unable to prepare statement: no such table: client_solde_historique
+in SYSTEMPATH\Database\SQLite3\Connection.php on line 164.
+ 1 SYSTEMPATH\Database\SQLite3\Connection.php(164): SQLite3->query('SELECT *
+FROM `client_solde_historique`
+WHERE `client_id` = 1
+AND `date_modification` < \'2026-07-20 08:18:08\'
+ORDER BY `date_modification` DESC
+ LIMIT 1')
+ 2 SYSTEMPATH\Database\BaseConnection.php(908): CodeIgniter\Database\SQLite3\Connection->execute('SELECT *
+FROM `client_solde_historique`
+WHERE `client_id` = 1
+AND `date_modification` < \'2026-07-20 08:18:08\'
+ORDER BY `date_modification` DESC
+ LIMIT 1')
+ 3 SYSTEMPATH\Database\BaseConnection.php(825): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `client_solde_historique`
+WHERE `client_id` = 1
+AND `date_modification` < \'2026-07-20 08:18:08\'
+ORDER BY `date_modification` DESC
+ LIMIT 1')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1647): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `client_solde_historique`
+WHERE `client_id` = :client_id:
+AND `date_modification` < :date_modification:
+ORDER BY `date_modification` DESC
+ LIMIT 1', [...], false)
+ 5 SYSTEMPATH\Model.php(297): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(714): CodeIgniter\Model->doFirst()
+ 7 APPPATH\Models\ClientSoldeHistorique.php(22): CodeIgniter\BaseModel->first()
+ 8 APPPATH\Controllers\ClientController.php(75): App\Models\ClientSoldeHistorique->getSoldebyClient(1, '2026-07-20 08:18:08')
+ 9 SYSTEMPATH\CodeIgniter.php(974): App\Controllers\ClientController->getSituationClients()
+10 SYSTEMPATH\CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ClientController))
+11 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+15 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\public\\index.php')

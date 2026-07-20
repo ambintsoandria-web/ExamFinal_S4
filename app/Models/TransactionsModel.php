@@ -4,7 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class TransactionModel extends Model
+class TransactionsModel extends Model
 {
     protected $table = 'transactions';
     protected $primaryKey = 'id';
@@ -23,10 +23,11 @@ class TransactionModel extends Model
             ->first();
     }
     public function getSommeTotalGainsByTypeOperation($typeOperationId, $date){
-        return $this->selectSum('frais')
+        $result =  $this->selectSum('frais')
             ->where('type_operation_id', $typeOperationId)
             ->where('date_transaction <', $date)
             ->first();
+        return $result['frais'] ?? 0;
     }
     public function getSoldeTotalByClient($clientId, $date){
         return $this->selectSum('montant + frais as solde_total')

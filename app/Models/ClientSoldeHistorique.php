@@ -2,7 +2,8 @@
     namespace App\Models;
 
     use CodeIgniter\Model;
-    public class ClientSoldeHistorique extends Model
+    
+    class ClientSoldeHistorique extends Model
     {
         protected $table = 'client_solde_historique';
         protected $primaryKey = 'id';
@@ -12,7 +13,7 @@
             'solde_precedent',
             'date_modification'
         ];
-    }
+
     public function getSoldebyClient($clientId, $date)
     {
         $historique = $this->where('client_id', $clientId)
@@ -25,5 +26,6 @@
             return $client['solde'];
         }
         return $historique['solde_precedent'];
+    }
     }
 ?>
