@@ -27,4 +27,52 @@ class FraisController extends BaseController
         }
         return view('Frais/index', ['data' => $data]);
     }
+    public function create($typeOperationId)
+    {
+        return view('Frais/create', ['typeOperationId' => $typeOperationId]);
+    }
+    public function add()
+    {
+        $typeOperationId = $this->request->getPost('type_operation_id');
+        $montantMin = $this->request->getPost('montant_min');
+        $montantMax = $this->request->getPost('montant_max');
+        $montantFrais = $this->request->getPost('montant_frais');
+
+        $data = [
+            'type_operation_id' => $typeOperationId,
+            'montant_min' => $montantMin,
+            'montant_max' => $montantMax,
+            'montant_frais' => $montantFrais
+        ];
+
+        $this->fraisModel->insert($data);
+
+        return redirect()->to(site_url('operateur/frais'));
+    }
+    public function edit($fraisId)
+    {
+        $frais = $this->fraisModel->getFraisById($fraisId);
+        return view('Frais/modify', ['frais' => $frais]);
+    }
+    public function update($fraisId)
+    {
+        $montantMin = $this->request->getPost('montant_min');
+        $montantMax = $this->request->getPost('montant_max');
+        $montantFrais = $this->request->getPost('montant_frais');
+
+        $data = [
+            'montant_min' => $montantMin,
+            'montant_max' => $montantMax,
+            'montant_frais' => $montantFrais
+        ];
+
+        $this->fraisModel->updateFrais($fraisId, $data);
+
+        return redirect()->to(site_url('operateur/frais'));
+    }
+    public function delete($fraisId)
+    {
+        $this->fraisModel->deleteFrais($fraisId);
+        return redirect()->to(site_url('operateur/frais'));
+    }
 }

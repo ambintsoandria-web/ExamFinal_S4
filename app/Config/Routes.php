@@ -20,3 +20,8 @@ $routes->get('operateur/goToprefixe', 'OperateurController::goToPrefixe', ['filt
 $routes->get('operateur/prefixes', 'OperateurController::goToPrefixe', ['filter' => 'operateurAuth']);
 $routes->post('operateur/prefixes/add', 'OperateurController::addPrefixe', ['filter' => 'operateurAuth']);
 $routes->get('operateur/frais', 'FraisController::index', ['filter' => 'operateurAuth']);
+$routes->get('operateur/frais/create/(:num)', 'FraisController::create/$1', ['filter' => 'operateurAuth']);
+$routes->post('frais/add', 'FraisController::add', ['filter' => 'operateurAuth']);
+$routes->get('frais/edit/(:num)', 'FraisController::edit/$1', ['filter' => 'operateurAuth']);
+$routes->post('frais/update/(:num)', 'FraisController::update/$1', ['filter' => 'operateurAuth']);
+$routes->get('frais/delete/(:num)', 'FraisController::delete/$1', ['filter' => 'operateurAuth']);
