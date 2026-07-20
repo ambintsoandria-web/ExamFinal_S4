@@ -15,10 +15,11 @@ use App\Models\TransfertModel;
 use App\Models\TransactionModel;
 use App\Models\ClientSoldeHistorique;
 
+
 class ClientController extends BaseController
 {
     protected ClientModel $clientModel;
-    protected TransactionsModel $transactionsModel;
+    protected TransactionModel $transactionsModel;
 
     protected FraisModel $fraisModel;
     protected TransfertModel $transfertModel;
@@ -29,7 +30,7 @@ class ClientController extends BaseController
     public function __construct()
     {
         $this->clientModel = new ClientModel();
-        $this->transactionsModel = new TransactionsModel();
+        $this->transactionsModel = new TransactionModel();
         $this->fraisModel = new FraisModel();
         $this->transfertModel = new TransfertModel();
         $this->transactionModel = new TransactionModel();
@@ -156,7 +157,8 @@ class ClientController extends BaseController
         session()->destroy();
         return redirect()->to(site_url('/'))->with('succes', 'Vous avez été déconnecté avec succès.');
     }
-    public function getSituationClients(){
+    public function getSituationClients()
+    {
         $clients = $this->clientModel->findAll();
         $date = date('Y-m-d H:i:s');
         foreach ($clients as &$client) {

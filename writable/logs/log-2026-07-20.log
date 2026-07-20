@@ -2471,3 +2471,175 @@ in SYSTEMPATH\Database\Database.php on line 186.
  9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\public\\index.php')
+CRITICAL - 2026-07-20 08:06:52 --> Error: Class "App\Models\TransactionModel" not found
+[Method: GET, Route: client/historique]
+in APPPATH/Controllers/ClientController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(944): App\Controllers\ClientController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinal_S4/public/index.php')
+CRITICAL - 2026-07-20 08:06:52 --> Error: Class "App\Models\TransactionModel" not found
+[Method: GET, Route: client/historique]
+in APPPATH/Controllers/ClientController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(944): App\Controllers\ClientController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinal_S4/public/index.php')
+CRITICAL - 2026-07-20 08:06:53 --> Error: Class "App\Models\TransactionModel" not found
+[Method: GET, Route: client/historique]
+in APPPATH/Controllers/ClientController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(944): App\Controllers\ClientController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinal_S4/public/index.php')
+CRITICAL - 2026-07-20 08:06:53 --> Error: Class "App\Models\TransactionModel" not found
+[Method: GET, Route: client/historique]
+in APPPATH/Controllers/ClientController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(944): App\Controllers\ClientController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinal_S4/public/index.php')
+CRITICAL - 2026-07-20 08:06:53 --> Error: Class "App\Models\TransactionModel" not found
+[Method: GET, Route: client/historique]
+in APPPATH/Controllers/ClientController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(944): App\Controllers\ClientController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinal_S4/public/index.php')
+CRITICAL - 2026-07-20 08:06:53 --> Error: Class "App\Models\TransactionModel" not found
+[Method: GET, Route: client/historique]
+in APPPATH/Controllers/ClientController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(944): App\Controllers\ClientController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinal_S4/public/index.php')
+CRITICAL - 2026-07-20 08:06:53 --> Error: Class "App\Models\TransactionModel" not found
+[Method: GET, Route: client/historique]
+in APPPATH/Controllers/ClientController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(944): App\Controllers\ClientController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinal_S4/public/index.php')
+CRITICAL - 2026-07-20 08:06:54 --> Error: Class "App\Models\TransactionModel" not found
+[Method: GET, Route: client/historique]
+in APPPATH/Controllers/ClientController.php on line 35.
+ 1 SYSTEMPATH/CodeIgniter.php(944): App\Controllers\ClientController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinal_S4/public/index.php')
+CRITICAL - 2026-07-20 08:07:17 --> ErrorException: Cannot use App\Models\TransactionsModel as TransactionsModel because the name is already in use
+[Method: GET, Route: client/historique]
+in APPPATH/Controllers/ClientController.php on line 17.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-20 08:07:17 --> ErrorException: Cannot use App\Models\TransactionsModel as TransactionsModel because the name is already in use
+[Method: GET, Route: client/historique]
+in APPPATH/Controllers/ClientController.php on line 17.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-20 08:07:17 --> ErrorException: Cannot use App\Models\TransactionsModel as TransactionsModel because the name is already in use
+[Method: GET, Route: client/historique]
+in APPPATH/Controllers/ClientController.php on line 17.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2026-07-20 08:07:30 --> Error: Class "App\Models\TransactionModel" not found
+[Method: GET, Route: client/historique]
+in APPPATH/Controllers/ClientController.php on line 36.
+ 1 SYSTEMPATH/CodeIgniter.php(944): App\Controllers\ClientController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinal_S4/public/index.php')
+CRITICAL - 2026-07-20 08:07:31 --> Error: Class "App\Models\TransactionModel" not found
+[Method: GET, Route: client/historique]
+in APPPATH/Controllers/ClientController.php on line 36.
+ 1 SYSTEMPATH/CodeIgniter.php(944): App\Controllers\ClientController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinal_S4/public/index.php')
+CRITICAL - 2026-07-20 08:07:46 --> Error: Class "App\Models\TransactionsModel" not found
+[Method: GET, Route: client/historique]
+in APPPATH/Controllers/ClientController.php on line 33.
+ 1 SYSTEMPATH/CodeIgniter.php(944): App\Controllers\ClientController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinal_S4/public/index.php')
+CRITICAL - 2026-07-20 08:07:47 --> Error: Class "App\Models\TransactionsModel" not found
+[Method: GET, Route: client/historique]
+in APPPATH/Controllers/ClientController.php on line 33.
+ 1 SYSTEMPATH/CodeIgniter.php(944): App\Controllers\ClientController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinal_S4/public/index.php')
+CRITICAL - 2026-07-20 08:07:47 --> Error: Class "App\Models\TransactionsModel" not found
+[Method: GET, Route: client/historique]
+in APPPATH/Controllers/ClientController.php on line 33.
+ 1 SYSTEMPATH/CodeIgniter.php(944): App\Controllers\ClientController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinal_S4/public/index.php')
+CRITICAL - 2026-07-20 08:07:47 --> Error: Class "App\Models\TransactionsModel" not found
+[Method: GET, Route: client/historique]
+in APPPATH/Controllers/ClientController.php on line 33.
+ 1 SYSTEMPATH/CodeIgniter.php(944): App\Controllers\ClientController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinal_S4/public/index.php')
+CRITICAL - 2026-07-20 08:07:48 --> Error: Class "App\Models\TransactionsModel" not found
+[Method: GET, Route: client/historique]
+in APPPATH/Controllers/ClientController.php on line 33.
+ 1 SYSTEMPATH/CodeIgniter.php(944): App\Controllers\ClientController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinal_S4/public/index.php')
+CRITICAL - 2026-07-20 08:07:48 --> Error: Class "App\Models\TransactionsModel" not found
+[Method: GET, Route: client/historique]
+in APPPATH/Controllers/ClientController.php on line 33.
+ 1 SYSTEMPATH/CodeIgniter.php(944): App\Controllers\ClientController->__construct()
+ 2 SYSTEMPATH/CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 4 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+ 6 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+ 7 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinal_S4/public/index.php')
