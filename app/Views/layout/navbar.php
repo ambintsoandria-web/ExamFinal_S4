@@ -124,13 +124,13 @@
                     </a>
                 </li>
                 <li>
-                    <a href="<?= base_url('operateur/frais') ?>" class="<?= ($active ?? '') == 'frais' ? 'active' : '' ?>">
+                    <a href="<?= site_url('operateur/frais') ?>" class="<?= ($active ?? '') == 'frais' ? 'active' : '' ?>">
                         <i class="bi bi-currency-dollar"></i>
                         Frais
                     </a>
                 </li>
                 <li>
-                    <a href="<?= base_url('operateur/clients') ?>"
+                    <a href="<?= site_url('operateur/clients') ?>"
                         class="<?= ($active ?? '') == 'clients' ? 'active' : '' ?>">
                         <i class="bi bi-people"></i>
                         Clients
@@ -138,7 +138,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="<?= base_url('operateur/gains') ?>" class="<?= ($active ?? '') == 'gains' ? 'active' : '' ?>">
+                    <a href="<?= site_url('operateur/gains') ?>" class="<?= ($active ?? '') == 'gains' ? 'active' : '' ?>">
                         <i class="bi bi-graph-up-arrow"></i>
                         Gains
                     </a>

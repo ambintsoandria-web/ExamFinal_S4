@@ -11,10 +11,10 @@
         </tr>
     </thead>
     <tbody>
-        <?php foreach ($gainsParTypeOperation as $gain): ?>
+        <?php foreach ($gainsByTypeOperation as $typeNom => $totalGain): ?>
             <tr>
-                <td><?= $gain['type_operation']['libelle'] ?></td>
-                <td><?= $gain['total_gains'] ?></td>
+                <td><?= esc($typeNom) ?></td>
+                <td><?= esc($totalGain) ?></td>
             </tr>
         <?php endforeach; ?>
     </tbody>

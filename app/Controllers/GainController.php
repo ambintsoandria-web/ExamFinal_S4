@@ -1,34 +1,40 @@
 <?php
 namespace App\Controllers;
 
-class GainController extends BaseController
-{
-    public $transactionModel;
-    public $fraisModel;
-    public $typeOperationModel;
+    use App\Models\TransactionsModel;
+    use App\Models\FraisModel;
+    use App\Models\TypeOperationModel;
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
 
-    public function __construct()
+    class GainController extends BaseController
     {
-        $this->transactionModel = new \App\Models\TransactionModel();
-        $this->fraisModel = new \App\Models\FraisModel();
-        $this->typeOperationModel = new \App\Models\TypeOperationModel();
-    }
-    public function index()
-    {
-        $date = date('Y-m-d H:i:s');
-        $totalGains = $this->transactionModel->getSommeTotalGains($date);
+        public $transactionModel;
+        public $fraisModel;
+        public $typeOperationModel;
 
-        $typeOperations = $this->typeOperationModel->findAll();
-        $gainsByTypeOperation = [];
-
-        foreach ($typeOperations as $typeOperation) {
-            $gainsByTypeOperation[$typeOperation['nom']] = $this->transactionModel->getSommeTotalGainsByTypeOperation($typeOperation['id'], $date);
+        public function __construct()
+        {
+            $this->transactionModel = new TransactionsModel();
+            $this->fraisModel = new FraisModel();
+            $this->typeOperationModel = new TypeOperationModel();
         }
+        public function index()
+        {
+            $date = date('Y-m-d H:i:s');
+            $totalGains = $this->transactionModel->getSommeTotalGains($date);
 
-        return view('gain/index', [
-            'totalGains' => $totalGains,
-            'gainsByTypeOperation' => $gainsByTypeOperation
-        ]);
+            $typeOperations = $this->typeOperationModel->findAll();
+            $gainsByTypeOperation = [];
+
+            foreach ($typeOperations as $typeOperation) {
+                $gainsByTypeOperation[$typeOperation['nom']] = $this->transactionModel->getSommeTotalGainsByTypeOperation($typeOperation['id'], $date);
+            }
+
+            return view('gain/index', [
+                'totalGains' => $totalGains,
+                'gainsByTypeOperation' => $gainsByTypeOperation
+            ]);
+        }
     }
-}
 ?>
