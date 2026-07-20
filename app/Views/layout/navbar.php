@@ -14,9 +14,9 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="<?= base_url('assets/css/navbar.css') ?>">
-
-    <style>
-    </style>
+    <link rel="stylesheet" href="<?= base_url('assets/css/operateur.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/situation.css') ?>">
+    <link rel="stylesheet" href="<?= base_url('assets/css/gains.css') ?>">
 </head>
 
 <body>
@@ -147,8 +147,7 @@
         </ul>
 
         <!-- Version -->
-        <div
-            style="margin-top: auto; padding: 20px 16px 0; border-top: 1px solid var(--line); font-size: 12px; color: var(--muted);">
+        <div class="sidebar-version">
             <i class="bi bi-code-square"></i> Version 1.0
         </div>
     </aside>

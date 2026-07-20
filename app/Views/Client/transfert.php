@@ -12,7 +12,7 @@
             <?= csrf_field() ?>
             <label for="telephone">Téléphone du destinataire</label>
             <div class="amount-input"><input type="text" name="telephone" id="telephone" value="<?= esc(old('telephone')) ?>" placeholder="0340000000" required></div>
-            <label for="montant" style="margin-top:18px">Montant</label>
+            <label for="montant" class="spaced-label">Montant</label>
             <div class="amount-input"><input type="number" name="montant" id="montant" value="<?= esc(old('montant')) ?>" placeholder="10 000" required><span>Ar</span></div>
             <button type="submit" class="deposit-button">Envoyer <i class="bi bi-arrow-right"></i></button>
         </form>

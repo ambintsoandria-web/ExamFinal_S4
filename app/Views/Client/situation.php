@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="<?= base_url('assets/css/situation.css') ?>">
     <div class="auth-shell auth-shell-lg">
 
-        <div class="login-box" style="max-width: 100%; width: 100%;">
+        <div class="login-box full-width">
 
             <div class="login-icon">
                 <i class="bi bi-people"></i>
@@ -117,8 +117,5 @@
         }
     });
 </script>
-
-<style>
-</style>
 
 <?= $this->endSection() ?>

@@ -17,6 +17,7 @@
     <div class="prefix-alert prefix-alert-success"><?= esc(session('succes')) ?></div>
 <?php endif; ?>
 
+<div class="prefix-layout">
 <div class="prefix-card">
     <div class="card-header">
         <span><i class="bi bi-plus-circle"></i></span>
@@ -38,7 +39,6 @@
             <button type="submit" class="save-button"><i class="bi bi-check2"></i> Enregistrer le préfixe</button>
         </form>
     </div>
-</div>
 </div>
 <div class="card">
     <div class="card-header">
@@ -76,4 +76,6 @@
             </table>
         </div>
     </div>
+</div>
+</div>
 <?= $this->endSection() ?>
