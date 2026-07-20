@@ -362,3 +362,108 @@ in SYSTEMPATH/Exceptions/FrameworkException.php on line 39.
  8 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
  9 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
 10 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinal_S4/public/index.php')
+CRITICAL - 2026-07-20 06:46:27 --> ErrorException: Undefined variable $variable
+[Method: GET, Route: operateur/prefixes]
+in APPPATH/Views/Operateur/prefixe.php on line 47.
+ 1 APPPATH/Views/Operateur/prefixe.php(47): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/main/Documents/GitHub/ExamFinal_S4/app/Views/Operateur/prefixe.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1254): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/OperateurController.php(24): view()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\OperateurController->goToPrefixe()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinal_S4/public/index.php')
+CRITICAL - 2026-07-20 06:46:28 --> ErrorException: Undefined variable $variable
+[Method: GET, Route: operateur/prefixes]
+in APPPATH/Views/Operateur/prefixe.php on line 47.
+ 1 APPPATH/Views/Operateur/prefixe.php(47): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/main/Documents/GitHub/ExamFinal_S4/app/Views/Operateur/prefixe.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1254): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/OperateurController.php(24): view()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\OperateurController->goToPrefixe()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinal_S4/public/index.php')
+CRITICAL - 2026-07-20 06:47:00 --> ErrorException: Undefined array key ""
+[Method: GET, Route: operateur/prefixes]
+in APPPATH/Views/Operateur/prefixe.php on line 49.
+ 1 APPPATH/Views/Operateur/prefixe.php(49): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/main/Documents/GitHub/ExamFinal_S4/app/Views/Operateur/prefixe.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1254): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/OperateurController.php(24): view()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\OperateurController->goToPrefixe()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinal_S4/public/index.php')
+CRITICAL - 2026-07-20 06:47:00 --> ErrorException: Undefined array key ""
+[Method: GET, Route: operateur/prefixes]
+in APPPATH/Views/Operateur/prefixe.php on line 49.
+ 1 APPPATH/Views/Operateur/prefixe.php(49): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/main/Documents/GitHub/ExamFinal_S4/app/Views/Operateur/prefixe.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1254): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/OperateurController.php(24): view()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\OperateurController->goToPrefixe()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinal_S4/public/index.php')
+CRITICAL - 2026-07-20 06:47:00 --> ErrorException: Undefined array key ""
+[Method: GET, Route: operateur/prefixes]
+in APPPATH/Views/Operateur/prefixe.php on line 49.
+ 1 APPPATH/Views/Operateur/prefixe.php(49): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/main/Documents/GitHub/ExamFinal_S4/app/Views/Operateur/prefixe.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1254): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/OperateurController.php(24): view()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\OperateurController->goToPrefixe()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinal_S4/public/index.php')
+CRITICAL - 2026-07-20 06:47:00 --> ErrorException: Undefined array key ""
+[Method: GET, Route: operateur/prefixes]
+in APPPATH/Views/Operateur/prefixe.php on line 49.
+ 1 APPPATH/Views/Operateur/prefixe.php(49): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/main/Documents/GitHub/ExamFinal_S4/app/Views/Operateur/prefixe.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1254): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/OperateurController.php(24): view()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\OperateurController->goToPrefixe()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinal_S4/public/index.php')
+CRITICAL - 2026-07-20 06:47:01 --> ErrorException: Undefined array key ""
+[Method: GET, Route: operateur/prefixes]
+in APPPATH/Views/Operateur/prefixe.php on line 49.
+ 1 APPPATH/Views/Operateur/prefixe.php(49): CodeIgniter\Debug\Exceptions->errorHandler()
+ 2 SYSTEMPATH/View/View.php(240): include('/home/main/Documents/GitHub/ExamFinal_S4/app/Views/Operateur/prefixe.php')
+ 3 SYSTEMPATH/View/View.php(243): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH/Common.php(1254): CodeIgniter\View\View->render()
+ 5 APPPATH/Controllers/OperateurController.php(24): view()
+ 6 SYSTEMPATH/CodeIgniter.php(974): App\Controllers\OperateurController->goToPrefixe()
+ 7 SYSTEMPATH/CodeIgniter.php(520): CodeIgniter\CodeIgniter->runController()
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinal_S4/public/index.php')

@@ -13,6 +13,9 @@ $routes->get('connexion/operateur', 'OperateurController::login');
 
 $routes->post('connexion/operateur', 'OperateurController::authenticate'); //post
 $routes->post('deconnexion', 'AuthController::logout', ['filter' => 'auth']);
+
+$routes->get('deconnexion', 'AuthController::logout', ['filter' => 'auth']);
+
 $routes->get('client/espace', 'ClientController::dashboard', ['filter' => 'clientAuth']);
 $routes->get('operateur/espace', 'OperateurController::dashboard', ['filter' => 'operateurAuth']);
 

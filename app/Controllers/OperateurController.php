@@ -10,22 +10,24 @@ ini_set('display_errors', 1);
 class OperateurController extends BaseController
 {
     private OperateurModel $operateurModel;
+    protected PrefixeModel $prefixeModel;
     public function __construct()
     {
         $this->operateurModel = new OperateurModel();
+        $this->prefixeModel = new PrefixeModel();
     }
     public function goToPrefixe()
     {
-        return view('Operateur/prefixe', [
-            'title' => 'Gestion des préfixes',
-            'active' => 'prefixes',
-        ]);
+        $data['listePrefixe'] = $this->prefixeModel->findAll();
+        $data['title'] = 'Gestion des préfixes';
+        $data['active'] = 'prefixes';
+        return view('Operateur/prefixe', $data);
     }
 
     public function addPrefixe()
     {
         $prefix = trim((string) $this->request->getPost('prefix'));
-        if (! preg_match('/^0[0-9]{2}$/', $prefix)) {
+        if (!preg_match('/^0[0-9]{2}$/', $prefix)) {
             return redirect()->back()->withInput()->with('erreur', 'Le préfixe doit contenir 3 chiffres et commencer par 0.');
         }
 

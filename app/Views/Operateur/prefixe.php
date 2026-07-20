@@ -39,5 +39,41 @@
         </form>
     </div>
 </div>
+</div>
+<div class="card">
+    <div class="card-header">
+        <i class="bi bi-list"></i> Liste des préfixes
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Préfixe</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($listePrefixe as $key => $prefixe): ?>
+                        <tr>
+                            <td><?= $key + 1 ?></td>
+                            <td>
+                                <span class="badge bg-primary">
+                                    <i class="bi bi-hash"></i> <?= esc($prefixe['prefix']) ?>
+                                </span>
+                            </td>
+                        </tr>
+                    <?php endforeach; ?>
 
+                    <?php if (empty($listePrefixe)): ?>
+                        <tr>
+                            <td colspan="2" class="text-center text-muted">
+                                <i class="bi bi-info-circle"></i> Aucun préfixe enregistré
+                            </td>
+                        </tr>
+                    <?php endif; ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
 <?= $this->endSection() ?>
