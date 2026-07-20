@@ -467,3 +467,31 @@ in APPPATH/Views/Operateur/prefixe.php on line 49.
 10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
 11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
 12 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinal_S4/public/index.php')
+CRITICAL - 2026-07-20 07:46:01 --> CodeIgniter\Exceptions\CriticalError: The required PHP extension "sqlite3" is not loaded. Install and enable it to use "SQLite3" driver.
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\Database.php on line 186.
+ 1 SYSTEMPATH\Database\Database.php(59): CodeIgniter\Database\Database->checkDbExtension('SQLite3')
+ 2 SYSTEMPATH\Database\Config.php(82): CodeIgniter\Database\Database->load([...], 'default')
+ 3 SYSTEMPATH\Model.php(152): CodeIgniter\Database\Config::connect('default')
+ 4 APPPATH\Controllers\ClientController.php(18): CodeIgniter\Model->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\ClientController->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\public\\index.php')
+CRITICAL - 2026-07-20 07:46:15 --> CodeIgniter\Exceptions\CriticalError: The required PHP extension "sqlite3" is not loaded. Install and enable it to use "SQLite3" driver.
+[Method: GET, Route: /]
+in SYSTEMPATH\Database\Database.php on line 186.
+ 1 SYSTEMPATH\Database\Database.php(59): CodeIgniter\Database\Database->checkDbExtension('SQLite3')
+ 2 SYSTEMPATH\Database\Config.php(82): CodeIgniter\Database\Database->load([...], 'default')
+ 3 SYSTEMPATH\Model.php(152): CodeIgniter\Database\Config::connect('default')
+ 4 APPPATH\Controllers\ClientController.php(18): CodeIgniter\Model->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(944): App\Controllers\ClientController->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(511): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(417): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+11 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\alan\\Documents\\GitHub\\ExamFinal_S4\\public\\index.php')

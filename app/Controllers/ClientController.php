@@ -3,14 +3,21 @@
 namespace App\Controllers;
 
 use App\Models\ClientModel;
+use App\Models\TransactionModel;
+use App\Models\ClientSoldeHistorique;
 
 class ClientController extends BaseController
 {
     protected ClientModel $clientModel;
+    public TransactionModel $transactionModel;
+    public ClientSoldeHistorique $clientSoldeHistorique;
+
 
     public function __construct()
     {
         $this->clientModel = new ClientModel();
+        $this->transactionModel = new TransactionModel();
+        $this->clientSoldeHistorique = new ClientSoldeHistorique();
     }
 
     public function login()
@@ -53,5 +60,18 @@ class ClientController extends BaseController
             return redirect()->to(site_url('/'))->with('erreur', 'Votre compte client est indisponible.');
         }
         return view('Client/dashboard', ['client' => $client]);
+    }
+    public function logout()
+    {
+        session()->destroy();
+        return redirect()->to(site_url('/'))->with('succes', 'Vous avez été déconnecté avec succès.');
+    }
+    public function getSituationClients(){
+        $clients = $this->clientModel->findAll();
+        $date = date('Y-m-d H:i:s');
+        foreach ($clients as &$client) {
+            $client['solde'] = $this->clientSoldeHistorique->getSoldebyClient($client['id'], $date);
+        }
+        return view('Client/situation', ['clients' => $clients]);
     }
 }
