@@ -17,3 +17,4 @@ $routes->get('client/espace', 'ClientController::dashboard', ['filter' => 'clien
 $routes->get('operateur/espace', 'OperateurController::dashboard', ['filter' => 'operateurAuth']);
 
 $routes->get('operateur/goToprefixe', 'OperateurController::goToPrefixe', ['filter' => 'operateurAuth']);
+$routes->get('operateur/frais', 'FraisController::index', ['filter' => 'operateurAuth']);
