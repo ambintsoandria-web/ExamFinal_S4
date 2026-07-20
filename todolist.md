@@ -45,3 +45,21 @@
         . (ok) Faire un retrait 
         . (ok) Faire un transfert 
         . (ok) Voir historique
+# Page de gain et situations client (Alan)
+    ## page gain:
+        . (ok) Front:
+            .. (ok) gain total des frais
+            .. (ok) gain par type d'operation
+        . (ok) Services:
+            .. (ok) getSommeTotalgains
+            .. (ok) getSommeTotalgainsByOperation
+        . (ok) Controller:
+            .. operateur/gain
+    ## page situation clients:
+        . (ok) Front:
+            .. (ok) recherche situation par date
+            .. (ok) liste des clients avec les soldes a un date donnee
+        . (ok) Services:
+            .. (ok) getSoldeTotalByClient
+        . (ok) Controller:
+            .. operateur/client
