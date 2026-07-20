@@ -16,4 +16,23 @@ class TransactionModel extends Model
         'frais',
         'date_transaction'
     ];
+
+    public function getSommeTotalGains($date){
+        return $this->selectSum('frais')
+            ->where('date_transaction <', $date)
+            ->first();
+    }
+    public function getSommeTotalGainsByTypeOperation($typeOperationId, $date){
+        return $this->selectSum('frais')
+            ->where('type_operation_id', $typeOperationId)
+            ->where('date_transaction <', $date)
+            ->first();
+    }
+    public function getSoldeTotalByClient($clientId, $date){
+        return $this->selectSum('montant + frais as solde_total')
+            ->where('client_id', $clientId)
+            ->where('date_transaction <', $date)
+            ->first();
+    }
+
 }
