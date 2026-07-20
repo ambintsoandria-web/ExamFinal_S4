@@ -23,7 +23,7 @@ class OperateurModel extends Model
         $builder = $this->where('actif', 1)->groupStart();
         if ($this->db->fieldExists('email', $this->table)) {
             $builder->where('LOWER(email)', $identifiant);
-            if (! str_contains($identifiant, '@')) {
+            if (!str_contains($identifiant, '@')) {
                 $builder->orWhere('telephone', preg_replace('/\s+/', '', $identifiant));
             }
         } else {
