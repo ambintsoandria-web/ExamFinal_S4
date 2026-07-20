@@ -164,7 +164,7 @@ class CLIRequest extends Request
                 continue;
             }
 
-            if (str_contains($value, ' ')) {
+            if (mb_strpos($value, ' ') !== false) {
                 $out .= '"' . $value . '" ';
             } else {
                 $out .= "{$value} ";

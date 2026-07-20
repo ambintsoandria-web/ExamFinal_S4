@@ -241,7 +241,7 @@ class Connection extends BaseConnection
      *
      * Escapes data based on type
      *
-     * @param mixed $str
+     * @param array|bool|float|int|object|string|null $str
      *
      * @return ($str is array ? array : float|int|string)
      */

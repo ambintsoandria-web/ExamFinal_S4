@@ -157,7 +157,7 @@ class Entity implements JsonSerializable
      * properties, using any `setCamelCasedProperty()` methods
      * that may or may not exist.
      *
-     * @param array<string, mixed> $data
+     * @param array<string, array<int|string, mixed>|bool|float|int|object|string|null> $data
      *
      * @return $this
      */
@@ -556,7 +556,7 @@ class Entity implements JsonSerializable
      * @param string                     $attribute Attribute name
      * @param string                     $method    Allowed to "get" and "set"
      *
-     * @return mixed
+     * @return array<int|string, mixed>|bool|float|int|object|string|null
      *
      * @throws CastException
      */
@@ -631,7 +631,7 @@ class Entity implements JsonSerializable
      *  $this->my_property = $p;
      *  $this->setMyProperty() = $p;
      *
-     * @param mixed $value
+     * @param array<int|string, mixed>|bool|float|int|object|string|null $value
      *
      * @return void
      *
@@ -682,7 +682,7 @@ class Entity implements JsonSerializable
      *  $p = $this->my_property
      *  $p = $this->getMyProperty()
      *
-     * @return mixed
+     * @return array<int|string, mixed>|bool|float|int|object|string|null
      *
      * @throws Exception
      */

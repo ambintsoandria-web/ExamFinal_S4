@@ -123,8 +123,7 @@ class UploadedFile extends File implements UploadedFileInterface
      * @see http://php.net/move_uploaded_file
      *
      * @param string      $targetPath Path to which to move the uploaded file.
-     * @param string|null $name       The name to rename the file to. When null, the client-provided name is used and sanitized.
-     *                                A caller-supplied name is NOT sanitized.
+     * @param string|null $name       the name to rename the file to.
      * @param bool        $overwrite  State for indicating whether to overwrite the previously generated file with the same
      *                                name or not.
      *
@@ -143,10 +142,7 @@ class UploadedFile extends File implements UploadedFileInterface
             throw HTTPException::forInvalidFile();
         }
 
-        if ($name === null) {
-            helper('security');
-            $name = sanitize_filename($this->getName());
-        }
+        $name ??= $this->getName();
         $destination = $overwrite ? $targetPath . $name : $this->getDestination($targetPath . $name);
 
         try {

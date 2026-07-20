@@ -15,7 +15,6 @@ namespace CodeIgniter\Encryption\Handlers;
 
 use CodeIgniter\Encryption\Exceptions\EncryptionException;
 use SensitiveParameter;
-use SodiumException;
 
 /**
  * SodiumHandler uses libsodium in encryption.
@@ -44,31 +43,34 @@ class SodiumHandler extends BaseHandler
      */
     public function encrypt(#[SensitiveParameter] $data, #[SensitiveParameter] $params = null)
     {
-        $key       = $this->key;
-        $blockSize = $this->blockSize;
+        // Allow key override
+        $key = $params !== null
+            ? (is_array($params) && isset($params['key']) ? $params['key'] : $params)
+            : $this->key;
 
-        if ($params !== null) {
-            if (is_array($params)) {
-                $key       = $params['key'] ?? $key;
-                $blockSize = $params['blockSize'] ?? $blockSize;
-            } else {
-                $key = $params;
-            }
-        }
+        // Allow blockSize override
+        $blockSize = (is_array($params) && isset($params['blockSize']))
+            ? $params['blockSize']
+            : $this->blockSize;
 
-        if (empty($key) || strlen((string) $key) !== SODIUM_CRYPTO_SECRETBOX_KEYBYTES) {
+        if (empty($key)) {
             throw EncryptionException::forNeedsStarterKey();
         }
 
+        // create a nonce for this operation
+        $nonce = random_bytes(SODIUM_CRYPTO_SECRETBOX_NONCEBYTES); // 24 bytes
+
+        // add padding before we encrypt the data
         if ($blockSize <= 0) {
             throw EncryptionException::forEncryptionFailed();
         }
 
-        $nonce = random_bytes(SODIUM_CRYPTO_SECRETBOX_NONCEBYTES);
-        $data  = sodium_pad($data, $blockSize);
+        $data = sodium_pad($data, $blockSize);
 
+        // encrypt message and combine with nonce
         $ciphertext = $nonce . sodium_crypto_secretbox($data, $nonce, $key);
 
+        // cleanup buffers
         sodium_memzero($data);
         sodium_memzero($key);
 
@@ -80,41 +82,45 @@ class SodiumHandler extends BaseHandler
      */
     public function decrypt($data, #[SensitiveParameter] $params = null)
     {
-        $key       = $this->key;
-        $blockSize = $this->blockSize;
+        // Allow key override
+        $key = $params !== null
+            ? (is_array($params) && isset($params['key']) ? $params['key'] : $params)
+            : $this->key;
 
-        if ($params !== null) {
-            if (is_array($params)) {
-                $key       = $params['key'] ?? $key;
-                $blockSize = $params['blockSize'] ?? $blockSize;
-            } else {
-                $key = $params;
-            }
-        }
+        // Allow blockSize override
+        $blockSize = (is_array($params) && isset($params['blockSize']))
+            ? $params['blockSize']
+            : $this->blockSize;
 
-        if (empty($key) || strlen((string) $key) !== SODIUM_CRYPTO_SECRETBOX_KEYBYTES) {
+        if (empty($key)) {
             throw EncryptionException::forNeedsStarterKey();
         }
 
         if (mb_strlen($data, '8bit') < (SODIUM_CRYPTO_SECRETBOX_NONCEBYTES + SODIUM_CRYPTO_SECRETBOX_MACBYTES)) {
+            // message was truncated
             throw EncryptionException::forAuthenticationFailed();
         }
 
+        // Extract info from encrypted data
         $nonce      = self::substr($data, 0, SODIUM_CRYPTO_SECRETBOX_NONCEBYTES);
         $ciphertext = self::substr($data, SODIUM_CRYPTO_SECRETBOX_NONCEBYTES);
 
+        // decrypt data
         $data = sodium_crypto_secretbox_open($ciphertext, $nonce, $key);
 
-        if ($data === false || $blockSize <= 0) {
+        if ($data === false) {
+            // message was tampered in transit
+            throw EncryptionException::forAuthenticationFailed(); // @codeCoverageIgnore
+        }
+
+        // remove extra padding during encryption
+        if ($blockSize <= 0) {
             throw EncryptionException::forAuthenticationFailed();
         }
 
-        try {
-            $data = sodium_unpad($data, $blockSize);
-        } catch (SodiumException) {
-            throw EncryptionException::forAuthenticationFailed();
-        }
+        $data = sodium_unpad($data, $blockSize);
 
+        // cleanup buffers
         sodium_memzero($ciphertext);
         sodium_memzero($key);
 

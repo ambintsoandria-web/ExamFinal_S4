@@ -87,18 +87,11 @@ class InvalidChars implements FilterInterface
      * @param array|string $value
      *
      * @return array|string
-     *
-     * @throws SecurityException
      */
     protected function checkEncoding($value)
     {
         if (is_array($value)) {
-            foreach ($value as $key => $item) {
-                if (is_string($key)) {
-                    $this->checkEncoding($key);
-                }
-                $this->checkEncoding($item);
-            }
+            array_map($this->checkEncoding(...), $value);
 
             return $value;
         }
@@ -120,12 +113,7 @@ class InvalidChars implements FilterInterface
     protected function checkControl($value)
     {
         if (is_array($value)) {
-            foreach ($value as $key => $item) {
-                if (is_string($key)) {
-                    $this->checkControl($key);
-                }
-                $this->checkControl($item);
-            }
+            array_map($this->checkControl(...), $value);
 
             return $value;
         }

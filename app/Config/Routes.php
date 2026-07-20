@@ -1,35 +1,31 @@
 <?php
 
 use CodeIgniter\Router\RouteCollection;
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
 
-/** @var RouteCollection $routes */
-$routes->get('/', 'UserController::index');
-$routes->get('login', 'UserController::index');
-$routes->post('login', 'UserController::login');
-$routes->get('logout', 'UserController::logout', ['filter' => 'auth']);
+/**
+ * @var RouteCollection $routes
+ */
 
-$routes->group('admin', ['filter' => 'role:admin'], static function ($routes) {
-    $routes->get('/', 'DashboardController::admin');
-    $routes->get('demandes', 'DashboardController::demandesAdmin');
-    $routes->get('employes', 'DashboardController::employes');
-    $routes->post('employes/addEmp', 'AdminController::addEmp');
-    $routes->get('employes/filter', 'DashboardController::filter');
-    $routes->post('employes/deleteEmp', 'AdminController::deleteEmp');
-    $routes->get('departement', 'DashboardController::departement');
-    $routes->post('departement/addDepart', 'AdminController::addDepart');
-    $routes->get('recherche', 'DashboardController::recherche');
-    $routes->get('getEmpByDept', 'DashboardController::getEmpByDept');
-    $routes->get('getCongeByEmp', 'DashboardController::getCongeByEmp');
-});
-$routes->group('rh', ['filter' => 'role:rh'], static function ($routes) {
-    $routes->get('/', 'DashboardController::rh');
-});
+$routes->get('/', 'AuthController::login');
+$routes->post('/auth/login', 'AuthController::doLogin');
+        
+$routes->get('/auth/logout', 'AuthController::logout');
+$routes->post('/auth/logout', 'AuthController::logout');
 
-$routes->group('employe', ['filter' => 'role:employe'], static function ($routes) {
-    $routes->get('/', 'DashboardController::employe');
-    $routes->get('demandes', 'DashboardController::demandes');
-    $routes->get('demandes/nouvelle', 'DashboardController::nouvelleDemande');
-    $routes->post('createDemande', 'EmployeController::createDemande');
-});
+$routes->get('/choix-caisse', 'CaisseController::choixCaisse');
+$routes->post('/valider-caisse', 'CaisseController::validerCaisse');
+
+$routes->get('/saisie-achat', 'CaisseController::saisieAchat');
+$routes->post('/ajouter-produit', 'CaisseController::ajouterProduit');
+$routes->post('/supprimer-ligne', 'CaisseController::supprimerLigne');
+$routes->post('/valider-achat', 'CaisseController::validerAchat');
+$routes->post('/vider-panier', 'CaisseController::viderPanier');
+
+$routes->get('/historique', 'CaisseController::historique');
+$routes->get('/historique/detail/(:num)', 'CaisseController::detail/$1');
+
+
+$routes->get('/produits', 'NavigationController::goToProduit');
+$routes->get('/caisses', 'NavigationController::goToCaisse');
+
+$routes->get('/statistiques', 'CaisseController::statistiques');

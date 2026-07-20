@@ -214,9 +214,9 @@ class CLI
      * // Do not provide options but requires a valid email
      * $email = CLI::prompt('What is your email?', null, 'required|valid_email');
      *
-     * @param string                   $field      Output "field" question
-     * @param list<int|string>|string  $options    String to a default value, array to a list of options (the first option will be the default value)
-     * @param list<string>|string|null $validation Validation rules
+     * @param string                  $field      Output "field" question
+     * @param list<int|string>|string $options    String to a default value, array to a list of options (the first option will be the default value)
+     * @param array|string|null       $validation Validation rules
      *
      * @return string The user input
      */
@@ -273,10 +273,10 @@ class CLI
     /**
      * prompt(), but based on the option's key
      *
-     * @param list<string>|string       $text       Output "field" text or an one or two value array where the first value is the text before listing the options
-     *                                              and the second value the text before asking to select one option. Provide empty string to omit
-     * @param array<int|string, string> $options    A list of options (array(key => description)), the first option will be the default value
-     * @param list<string>|string|null  $validation Validation rules
+     * @param array|string      $text       Output "field" text or an one or two value array where the first value is the text before listing the options
+     *                                      and the second value the text before asking to select one option. Provide empty string to omit
+     * @param array             $options    A list of options (array(key => description)), the first option will be the default value
+     * @param array|string|null $validation Validation rules
      *
      * @return string The selected key of $options
      */
@@ -302,11 +302,11 @@ class CLI
     /**
      * This method is the same as promptByKey(), but this method supports multiple keys, separated by commas.
      *
-     * @param string                    $text    Output "field" text or an one or two value array where the first value is the text before listing the options
-     *                                           and the second value the text before asking to select one option. Provide empty string to omit
-     * @param array<int|string, string> $options A list of options (array(key => description)), the first option will be the default value
+     * @param string $text    Output "field" text or an one or two value array where the first value is the text before listing the options
+     *                        and the second value the text before asking to select one option. Provide empty string to omit
+     * @param array  $options A list of options (array(key => description)), the first option will be the default value
      *
-     * @return array<int|string, string> The selected key(s) and value(s) of $options
+     * @return array The selected key(s) and value(s) of $options
      */
     public static function promptByMultipleKeys(string $text, array $options): array
     {
@@ -375,8 +375,6 @@ class CLI
 
     /**
      * Validation for $options in promptByKey() and promptByMultipleKeys(). Return an error if $options is an empty array.
-     *
-     * @param array<int|string, string> $options
      */
     private static function isZeroOptions(array $options): void
     {
@@ -387,8 +385,6 @@ class CLI
 
     /**
      * Print each key and value one by one
-     *
-     * @param array<int|string, string> $options
      */
     private static function printKeysAndValues(array $options): void
     {
@@ -408,9 +404,9 @@ class CLI
     /**
      * Validate one prompt "field" at a time
      *
-     * @param string              $field Prompt "field" output
-     * @param string              $value Input value
-     * @param list<string>|string $rules Validation rules
+     * @param string       $field Prompt "field" output
+     * @param string       $value Input value
+     * @param array|string $rules Validation rules
      */
     protected static function validate(string $field, string $value, $rules): bool
     {
@@ -711,7 +707,7 @@ class CLI
     public static function hasColorSupport($resource): bool
     {
         // Follow https://no-color.org/
-        if (isset($_SERVER['NO_COLOR']) || getenv('NO_COLOR') !== false) { // @phpstan-ignore codeigniter.superglobalsOffsetAccess (reads live $_SERVER, not the snapshot service)
+        if (isset($_SERVER['NO_COLOR']) || getenv('NO_COLOR') !== false) {
             return false;
         }
 
@@ -722,7 +718,7 @@ class CLI
         if (is_windows()) {
             // @codeCoverageIgnoreStart
             return static::streamSupports('sapi_windows_vt100_support', $resource)
-                || isset($_SERVER['ANSICON']) // @phpstan-ignore codeigniter.superglobalsOffsetAccess (reads live $_SERVER, not the snapshot service)
+                || isset($_SERVER['ANSICON'])
                 || getenv('ANSICON') !== false
                 || getenv('ConEmuANSI') === 'ON'
                 || getenv('TERM') === 'xterm';
@@ -891,7 +887,7 @@ class CLI
      */
     protected static function parseCommandLine()
     {
-        $args = $_SERVER['argv'] ?? []; // @phpstan-ignore codeigniter.superglobalsOffsetAccess (reads live $_SERVER, not the snapshot service)
+        $args = $_SERVER['argv'] ?? [];
         array_shift($args); // scrap invoking program
         $optionValue = false;
 
@@ -1016,7 +1012,7 @@ class CLI
                 continue;
             }
 
-            if (str_contains($value, ' ')) {
+            if (mb_strpos($value, ' ') !== false) {
                 $out .= "\"{$value}\" ";
             } elseif ($value !== null) {
                 $out .= "{$value} ";
@@ -1029,8 +1025,8 @@ class CLI
     /**
      * Returns a well formatted table
      *
-     * @param list<array<int|string, mixed>> $tbody List of rows
-     * @param list<string>                   $thead List of columns
+     * @param array $tbody List of rows
+     * @param array $thead List of columns
      *
      * @return void
      */

@@ -711,10 +711,15 @@ class Model extends BaseModel
         return parent::update($id, $row);
     }
 
+    protected function objectToRawArray($object, bool $onlyChanged = true, bool $recursive = false): array
+    {
+        return parent::objectToRawArray($object, $onlyChanged);
+    }
+
     /**
      * Provides/instantiates the builder/db connection and model's table/primary key names and return type.
      *
-     * @return mixed
+     * @return array<int|string, mixed>|BaseBuilder|bool|float|int|object|string|null
      */
     public function __get(string $name)
     {
@@ -741,7 +746,7 @@ class Model extends BaseModel
      * Provides direct access to method in the builder (if available)
      * and the database connection.
      *
-     * @return mixed
+     * @return $this|array<int|string, mixed>|BaseBuilder|bool|float|int|object|string|null
      */
     public function __call(string $name, array $params)
     {

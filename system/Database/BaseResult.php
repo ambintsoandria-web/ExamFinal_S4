@@ -312,7 +312,7 @@ abstract class BaseResult implements ResultInterface
             $this->currentRow = $n;
         }
 
-        return $this->customResultObject[$className][$this->currentRow] ?? null;
+        return $this->customResultObject[$className][$this->currentRow];
     }
 
     /**
@@ -333,7 +333,7 @@ abstract class BaseResult implements ResultInterface
             $this->currentRow = $n;
         }
 
-        return $result[$this->currentRow] ?? null;
+        return $result[$this->currentRow];
     }
 
     /**
@@ -350,11 +350,11 @@ abstract class BaseResult implements ResultInterface
             return null;
         }
 
-        if ($n !== $this->currentRow && isset($result[$n])) {
+        if ($n !== $this->customResultObject && isset($result[$n])) {
             $this->currentRow = $n;
         }
 
-        return $result[$this->currentRow] ?? null;
+        return $result[$this->currentRow];
     }
 
     /**
@@ -440,7 +440,7 @@ abstract class BaseResult implements ResultInterface
             $this->currentRow--;
         }
 
-        return $result[$this->currentRow] ?? null;
+        return $result[$this->currentRow];
     }
 
     /**

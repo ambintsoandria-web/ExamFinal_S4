@@ -92,7 +92,7 @@ class Builder extends BaseBuilder
             $sql .= 'ON ' . implode(
                 ' AND ',
                 array_map(
-                    static fn ($key, $value): RawSql|string => (
+                    static fn ($key, $value) => (
                         ($value instanceof RawSql && is_string($key))
                         ?
                         $table . '.' . $key . ' = ' . $value

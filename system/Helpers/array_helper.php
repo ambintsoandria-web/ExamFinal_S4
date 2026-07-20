@@ -20,7 +20,7 @@ if (! function_exists('dot_array_search')) {
      * Searches an array through dot syntax. Supports
      * wildcard searches, like foo.*.bar
      *
-     * @return mixed
+     * @return array|bool|int|object|string|null
      */
     function dot_array_search(string $index, array $array)
     {
@@ -34,7 +34,7 @@ if (! function_exists('array_deep_search')) {
      *
      * @param int|string $key
      *
-     * @return mixed
+     * @return array|bool|float|int|object|string|null
      */
     function array_deep_search($key, array $array)
     {
@@ -43,12 +43,8 @@ if (! function_exists('array_deep_search')) {
         }
 
         foreach ($array as $value) {
-            if (is_array($value)) {
-                $result = array_deep_search($key, $value);
-
-                if ($result !== null) {
-                    return $result;
-                }
+            if (is_array($value) && ($result = array_deep_search($key, $value))) {
+                return $result;
             }
         }
 

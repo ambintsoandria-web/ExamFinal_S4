@@ -316,7 +316,7 @@ class Rules
     }
 
     /**
-     * @param mixed $str
+     * @param array|bool|float|int|object|string|null $str
      */
     public function required($str = null): bool
     {
@@ -429,22 +429,15 @@ class Rules
 
                 $fieldData       = dot_array_search($otherField, $data);
                 $fieldSplitArray = explode('.', $field);
-                $fieldKey        = $fieldSplitArray[1] ?? null;
+                $fieldKey        = $fieldSplitArray[1];
 
                 if (is_array($fieldData)) {
-                    if (empty($fieldData[$fieldKey])) {
-                        return false;
-                    }
-
-                    continue;
+                    return ! empty(dot_array_search($otherField, $data)[$fieldKey]);
                 }
-
-                $nowField      = str_replace('*', (string) $fieldKey, $otherField);
+                $nowField      = str_replace('*', $fieldKey, $otherField);
                 $nowFieldVaule = dot_array_search($nowField, $data);
 
-                if ($nowFieldVaule === null) {
-                    return false;
-                }
+                return null !== $nowFieldVaule;
             }
         }
 
@@ -454,10 +447,10 @@ class Rules
     /**
      * The field exists in $data.
      *
-     * @param mixed       $value The field value.
-     * @param string|null $param The rule's parameter.
-     * @param array       $data  The data to be validated.
-     * @param string|null $field The field name.
+     * @param array|bool|float|int|object|string|null $value The field value.
+     * @param string|null                             $param The rule's parameter.
+     * @param array                                   $data  The data to be validated.
+     * @param string|null                             $field The field name.
      */
     public function field_exists(
         $value = null,

@@ -75,8 +75,6 @@ class Console
      * unshift it as argument instead.
      *
      * @param array<int|string, string|null> $params
-     *
-     * @return array<int|string, string|null>
      */
     private function parseParamsForHelpOption(array $params): array
     {

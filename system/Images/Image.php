@@ -26,14 +26,14 @@ class Image extends File
     /**
      * The original image width in pixels.
      *
-     * @var int
+     * @var float|int
      */
     public $origWidth;
 
     /**
      * The original image height in pixels.
      *
-     * @var int
+     * @var float|int
      */
     public $origHeight;
 

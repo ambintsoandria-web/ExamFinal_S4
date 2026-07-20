@@ -748,7 +748,7 @@ class Parser extends View
      * Converts an object to an array, respecting any
      * toArray() methods on an object.
      *
-     * @param mixed $value
+     * @param array<string, mixed>|bool|float|int|object|string|null $value
      *
      * @return array<string, mixed>|bool|float|int|string|null
      */

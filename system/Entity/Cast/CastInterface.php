@@ -23,20 +23,20 @@ interface CastInterface
     /**
      * Takes a raw value from Entity, returns its value for PHP.
      *
-     * @param mixed              $value  Data
-     * @param array<int, string> $params Additional param
+     * @param array|bool|float|int|object|string|null $value  Data
+     * @param array<int, string>                      $params Additional param
      *
-     * @return mixed
+     * @return array|bool|float|int|object|string|null
      */
     public static function get($value, array $params = []);
 
     /**
      * Takes a PHP value, returns its raw value for Entity.
      *
-     * @param mixed              $value  Data
-     * @param array<int, string> $params Additional param
+     * @param array|bool|float|int|object|string|null $value  Data
+     * @param array<int, string>                      $params Additional param
      *
-     * @return mixed
+     * @return array|bool|float|int|object|string|null
      */
     public static function set($value, array $params = []);
 }
