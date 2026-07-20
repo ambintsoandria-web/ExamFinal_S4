@@ -49,9 +49,11 @@
             </div>
             <form action="<?= site_url('deconnexion') ?>" method="post" class="logout-form">
                 <?= csrf_field() ?>
-                <button type="submit" class="logout-btn" aria-label="Se déconnecter" title="Se déconnecter">
-                    <i class="bi bi-box-arrow-right"></i>
-                </button>
+                <a href="<?=  site_url('/deconnexion') ?>">
+                    <button type="submit" class="logout-btn" aria-label="Se déconnecter" title="Se déconnecter">
+                        <i class="bi bi-box-arrow-right"></i>
+                    </button>
+                </a>
             </form>
         </div>
     </nav>
