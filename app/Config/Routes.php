@@ -19,3 +19,4 @@ $routes->get('operateur/espace', 'OperateurController::dashboard', ['filter' => 
 $routes->get('operateur/goToprefixe', 'OperateurController::goToPrefixe', ['filter' => 'operateurAuth']);
 $routes->get('operateur/prefixes', 'OperateurController::goToPrefixe', ['filter' => 'operateurAuth']);
 $routes->post('operateur/prefixes/add', 'OperateurController::addPrefixe', ['filter' => 'operateurAuth']);
+$routes->get('operateur/frais', 'FraisController::index', ['filter' => 'operateurAuth']);
