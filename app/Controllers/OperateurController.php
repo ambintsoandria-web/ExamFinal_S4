@@ -1,6 +1,7 @@
 <?php
 namespace App\Controllers;
 use App\Models\OperateurModel;
+use App\Models\PrefixeModel;
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
@@ -15,8 +16,26 @@ class OperateurController extends BaseController
     }
     public function goToPrefixe()
     {
+        return view('Operateur/prefixe', [
+            'title' => 'Gestion des préfixes',
+            'active' => 'prefixes',
+        ]);
+    }
 
-        return view('Operateur/prefixe');
+    public function addPrefixe()
+    {
+        $prefix = trim((string) $this->request->getPost('prefix'));
+        if (! preg_match('/^0[0-9]{2}$/', $prefix)) {
+            return redirect()->back()->withInput()->with('erreur', 'Le préfixe doit contenir 3 chiffres et commencer par 0.');
+        }
+
+        $prefixeModel = new PrefixeModel();
+        if ($prefixeModel->where('prefix', $prefix)->first()) {
+            return redirect()->back()->withInput()->with('erreur', 'Ce préfixe existe déjà.');
+        }
+
+        $prefixeModel->insert(['prefix' => $prefix]);
+        return redirect()->to(site_url('operateur/prefixes'))->with('succes', 'Le préfixe ' . $prefix . ' a été ajouté.');
     }
     public function login()
     {
