@@ -1,7 +1,7 @@
 <?php
 namespace App\Controllers;
 
-    use App\Models\TransactionsModel;
+    use App\Models\TransactionModel;
     use App\Models\FraisModel;
     use App\Models\TypeOperationModel;
     error_reporting(E_ALL);
@@ -15,7 +15,7 @@ namespace App\Controllers;
 
         public function __construct()
         {
-            $this->transactionModel = new TransactionsModel();
+            $this->transactionModel = new TransactionModel();
             $this->fraisModel = new FraisModel();
             $this->typeOperationModel = new TypeOperationModel();
         }
