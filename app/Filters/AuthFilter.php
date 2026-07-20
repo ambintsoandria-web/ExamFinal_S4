@@ -8,8 +8,8 @@ class AuthFilter implements FilterInterface
     public function before(RequestInterface $request, $arguments = null)
     {
         $session = session();
-        if (!$session->get('logged_in')) {
-            return redirect()->to('/login')->with('erreur', 'Connectez-vous pour accéder à cette page');
+        if (! $session->get('auth_id') || ! in_array($session->get('auth_type'), ['client', 'operateur'], true)) {
+            return redirect()->to(site_url('/'))->with('erreur', 'Connectez-vous pour acceder a cette page.');
         }
     }
     public function after(

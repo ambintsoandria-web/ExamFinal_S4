@@ -1,0 +1,45 @@
+CRITICAL - 2026-07-20 06:05:20 --> ParseError: syntax error, unexpected token "}"
+[Method: GET, Route: /]
+in APPPATH/Controllers/ClientController.php on line 24.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(320): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/Router/Router.php(790): class_exists()
+ 5 SYSTEMPATH/Router/Router.php(228): CodeIgniter\Router\Router->processRouteAttributes()
+ 6 SYSTEMPATH/CodeIgniter.php(852): CodeIgniter\Router\Router->handle()
+ 7 SYSTEMPATH/CodeIgniter.php(464): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinal_S4/public/index.php')
+CRITICAL - 2026-07-20 06:05:20 --> ParseError: syntax error, unexpected token "}"
+[Method: GET, Route: /]
+in APPPATH/Controllers/ClientController.php on line 24.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(320): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/Router/Router.php(790): class_exists()
+ 5 SYSTEMPATH/Router/Router.php(228): CodeIgniter\Router\Router->processRouteAttributes()
+ 6 SYSTEMPATH/CodeIgniter.php(852): CodeIgniter\Router\Router->handle()
+ 7 SYSTEMPATH/CodeIgniter.php(464): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinal_S4/public/index.php')
+CRITICAL - 2026-07-20 06:06:25 --> ParseError: syntax error, unexpected token "}"
+[Method: GET, Route: /]
+in APPPATH/Controllers/ClientController.php on line 24.
+ 1 SYSTEMPATH/Autoloader/Autoloader.php(320): CodeIgniter\Autoloader\Autoloader->includeFile()
+ 2 SYSTEMPATH/Autoloader/Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->loadInNamespace()
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass()
+ 4 SYSTEMPATH/Router/Router.php(790): class_exists()
+ 5 SYSTEMPATH/Router/Router.php(228): CodeIgniter\Router\Router->processRouteAttributes()
+ 6 SYSTEMPATH/CodeIgniter.php(852): CodeIgniter\Router\Router->handle()
+ 7 SYSTEMPATH/CodeIgniter.php(464): CodeIgniter\CodeIgniter->tryToRouteIt()
+ 8 SYSTEMPATH/CodeIgniter.php(363): CodeIgniter\CodeIgniter->handleRequest()
+ 9 SYSTEMPATH/Boot.php(417): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH/Boot.php(68): CodeIgniter\Boot::runCodeIgniter()
+11 FCPATH/index.php(59): CodeIgniter\Boot::bootWeb()
+12 SYSTEMPATH/rewrite.php(44): require_once('/home/main/Documents/GitHub/ExamFinal_S4/public/index.php')
