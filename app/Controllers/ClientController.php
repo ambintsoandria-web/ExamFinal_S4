@@ -54,6 +54,11 @@ class ClientController extends BaseController
         $montant = $this->request->getPost('montant');
         $clientId = session('auth_id');
         $client = $this->clientModel->find($clientId);
+        $this->clientSoldeHistorique->insert([
+            'client_id' => $client['id'],
+            'solde_precedent' => $client['solde'],
+            'date_modification' => date('Y-m-d H:i:s'),
+        ]);
 
         $this->transactionsModel->insert([
             'client_id' => $clientId,
@@ -74,6 +79,13 @@ class ClientController extends BaseController
         $montant = $this->request->getPost('montant');
         $clientId = session('auth_id');
         $client = $this->clientModel->find($clientId);
+        $this->clientSoldeHistorique->insert([
+            'client_id' => $client['id'],
+            'solde_precedent' => $client['solde'],
+            'date_modification' => date('Y-m-d H:i:s'),
+        ]);
+
+
         $this->transactionsModel->insert([
             'client_id' => $clientId,
             'type_operation_id' => 2,
@@ -91,6 +103,14 @@ class ClientController extends BaseController
     {
         $montant = $this->request->getPost('montant');
         $telephone = $this->request->getPost('telephone');
+        $clientId = session('auth_id');
+        $client = $this->clientModel->find($clientId);
+        $this->clientSoldeHistorique->insert([
+            'client_id' => $client['id'],
+            'solde_precedent' => $client['solde'],
+            'date_modification' => date('Y-m-d H:i:s'),
+        ]);
+
         if (!$this->transfertModel->effectuer(session('auth_id'), $telephone, $montant)) {
             return redirect()->back()->withInput()->with('erreur', 'Client inexistant.');
         }
