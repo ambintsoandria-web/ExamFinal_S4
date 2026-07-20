@@ -32,8 +32,15 @@ class FraisModel extends Model
     {
         return $this->find($fraisId);
     }
-    public function deleteFrais($fraisId)
+    public function getFrais($montant)
     {
-        return $this->delete($fraisId);
+        $montantFrais = 0;
+        $listeFrais = $this->findAll();
+        foreach ($listeFrais as $frais) {
+            if ($frais['montant_min'] <= $montant && $montant <= $frais['montant_max']) {
+                $montantFrais = $frais['montant_frais'];
+            }
+        }
+        return $montantFrais;
     }
 }

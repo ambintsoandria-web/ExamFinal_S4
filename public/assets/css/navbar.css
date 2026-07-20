@@ -91,6 +91,9 @@
             color: var(--ink);
         }
 
+        .nav-user > span { display:flex;flex-direction:column;line-height:1.15; }
+        .nav-role { color:var(--muted);font-size:10px;font-weight:600;margin-top:3px;text-transform:uppercase;letter-spacing:.6px; }
+
         .nav-user .avatar {
             width: 38px;
             height: 38px;
@@ -233,6 +236,7 @@
         .prefix-alert { max-width:760px;padding:13px 16px;border-radius:11px;margin-bottom:18px;font-size:13px;font-weight:600; }
         .prefix-alert-error { color:#a12e2e;background:#fff0f0;border:1px solid #f2caca; }
         .prefix-alert-success { color:var(--green-dark);background:#e8faf2;border:1px solid #bce8d5; }
+        .deposit-wrap{max-width:560px;margin:15px auto}.deposit-back{display:inline-flex;align-items:center;gap:7px;color:var(--muted);font-size:13px;font-weight:700;text-decoration:none;margin-bottom:18px}.deposit-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:34px;box-shadow:0 16px 45px rgba(5,44,33,.08)}.deposit-icon{width:52px;height:52px;border-radius:15px;background:#e4f9f0;color:var(--green-dark);display:grid;place-items:center;font-size:24px;margin-bottom:22px}.deposit-card h1{font:800 30px/1.2 Manrope,sans-serif;letter-spacing:-.8px;margin:7px 0}.deposit-lead{color:var(--muted);font-size:14px;margin-bottom:25px}.deposit-form label{display:block;font-size:13px;font-weight:700;margin-bottom:9px}.amount-input{height:62px;border:1.5px solid var(--line);border-radius:13px;display:flex;align-items:center;background:#fbfdfc}.amount-input:focus-within{border-color:var(--green);box-shadow:0 0 0 4px rgba(25,185,121,.1)}.amount-input input{flex:1;min-width:0;height:100%;border:0;outline:0;background:transparent;padding:0 18px;font:700 20px "DM Sans"}.amount-input span{color:var(--green-dark);font-weight:800;padding:0 18px;border-left:1px solid var(--line)}.deposit-form small{display:block;color:var(--muted);font-size:11px;margin:8px 2px 0}.deposit-button{width:100%;height:54px;border:0;border-radius:12px;background:var(--green-dark);color:#fff;font:700 14px "DM Sans";cursor:pointer;margin-top:24px}.deposit-button i{margin-left:8px}.deposit-button:hover{background:#076344}
 
         /* ============================================
            OVERLAY (mobile)

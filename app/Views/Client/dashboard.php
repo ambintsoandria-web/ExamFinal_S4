@@ -1,3 +1,11 @@
+<?= $this->extend('layout/navbar') ?>
+<?= $this->section('content') ?>
+
+<?php if (session('succes')): ?>
+    <div class="prefix-alert prefix-alert-success"><?= esc(session('succes')) ?></div>
+<?php endif; ?>
+
+
 <!doctype html>
 <html lang="fr">
 
@@ -21,3 +29,4 @@
 </body>
 
 </html>
+<?= $this->endSection() ?>

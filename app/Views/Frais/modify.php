@@ -2,6 +2,7 @@
 <?= $this->section('content') ?>
     <h1>Modifier un frais</h1>
     <form method="post" action="<?= site_url('frais/update/' . $frais['id']) ?>">
+        <?= csrf_field() ?>
         <div class="form-group">
             <label for="montant_min">Montant minimum</label>
             <input type="number" class="form-control" id="montant_min" name="montant_min" value="<?= $frais['montant_min'] ?>" required>
@@ -17,4 +18,3 @@
         <button type="submit" class="btn btn-primary">Enregistrer</button>
     </form>
 <?= $this->endSection() ?>
-<?= $this->include('layout/footer') ?>

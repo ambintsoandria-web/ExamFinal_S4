@@ -1,8 +1,9 @@
 <?php
-
 namespace App\Controllers;
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
 use App\Models\FraisModel;
-use App\Models\TypeOperations;
+use App\Models\TypeOperationModel;
 class FraisController extends BaseController
 {
     public $fraisModel;
@@ -11,9 +12,10 @@ class FraisController extends BaseController
     public function __construct()
     {
         $this->fraisModel = new FraisModel();
-        $this->typeOperationsModel = new TypeOperations();
+        $this->typeOperationsModel = new TypeOperationModel();
     }
-    public function index(){
+    public function index()
+    {
         $types_operations = $this->typeOperationsModel->findAll();
 
         $data = [];
@@ -25,18 +27,40 @@ class FraisController extends BaseController
                 'frais' => $frais
             ];
         }
-        return view('Frais/index', ['data' => $data]);
+        return view('Frais/index', [
+            'data' => $data,
+            'title' => 'Gestion des frais',
+            'active' => 'frais',
+        ]);
     }
     public function create($typeOperationId)
     {
-        return view('Frais/create', ['typeOperationId' => $typeOperationId]);
+        $typeOperation = $this->typeOperationsModel->find((int) $typeOperationId);
+        if (! $typeOperation) {
+            return redirect()->to(site_url('operateur/frais'))->with('erreur', "Ce type d'opération n'existe pas.");
+        }
+
+        return view('Frais/create', [
+            'typeOperationId' => (int) $typeOperationId,
+            'typeOperation' => $typeOperation,
+            'title' => 'Ajouter un frais',
+            'active' => 'frais',
+        ]);
     }
     public function add()
     {
-        $typeOperationId = $this->request->getPost('type_operation_id');
-        $montantMin = $this->request->getPost('montant_min');
-        $montantMax = $this->request->getPost('montant_max');
-        $montantFrais = $this->request->getPost('montant_frais');
+        $typeOperationId = (int) $this->request->getPost('type_operation_id');
+        $montantMin = filter_var($this->request->getPost('montant_min'), FILTER_VALIDATE_FLOAT);
+        $montantMax = filter_var($this->request->getPost('montant_max'), FILTER_VALIDATE_FLOAT);
+        $montantFrais = filter_var($this->request->getPost('montant_frais'), FILTER_VALIDATE_FLOAT);
+
+        if (! $this->typeOperationsModel->find($typeOperationId)) {
+            return redirect()->to(site_url('operateur/frais'))->with('erreur', "Le type d'opération est invalide.");
+        }
+        if ($montantMin === false || $montantMax === false || $montantFrais === false
+            || $montantMin < 0 || $montantMax <= $montantMin || $montantFrais < 0) {
+            return redirect()->back()->withInput()->with('erreur', 'Vérifiez les montants : le maximum doit être supérieur au minimum.');
+        }
 
         $data = [
             'type_operation_id' => $typeOperationId,
@@ -45,9 +69,11 @@ class FraisController extends BaseController
             'montant_frais' => $montantFrais
         ];
 
-        $this->fraisModel->insert($data);
+        if (! $this->fraisModel->insert($data)) {
+            return redirect()->back()->withInput()->with('erreur', "Impossible d'enregistrer ce barème.");
+        }
 
-        return redirect()->to(site_url('operateur/frais'));
+        return redirect()->to(site_url('operateur/frais'))->with('succes', 'Le barème de frais a été ajouté.');
     }
     public function edit($fraisId)
     {

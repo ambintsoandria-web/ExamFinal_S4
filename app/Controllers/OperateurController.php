@@ -6,7 +6,6 @@ use App\Models\PrefixeModel;
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
-
 class OperateurController extends BaseController
 {
     private OperateurModel $operateurModel;
@@ -76,6 +75,10 @@ class OperateurController extends BaseController
             session()->destroy();
             return redirect()->to(site_url('connexion/operateur'))->with('erreur', 'Votre compte operateur est indisponible.');
         }
-        return view('Operateur/dashboard', ['operateur' => $operateur]);
+        return view('Operateur/dashboard', [
+            'operateur' => $operateur,
+            'title' => 'Tableau de bord opérateur',
+            'active' => 'dashboard',
+        ]);
     }
 }

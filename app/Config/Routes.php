@@ -14,9 +14,16 @@ $routes->get('connexion/operateur', 'OperateurController::login');
 $routes->post('connexion/operateur', 'OperateurController::authenticate'); //post
 $routes->post('deconnexion', 'AuthController::logout', ['filter' => 'auth']);
 
-$routes->get('deconnexion', 'AuthController::logout', ['filter' => 'auth']);
-
 $routes->get('client/espace', 'ClientController::dashboard', ['filter' => 'clientAuth']);
+$routes->get('client/retrait', 'ClientController::goToRetrait', ['filter' => 'clientAuth']);
+$routes->get('client/depot', 'ClientController::goToDepot', ['filter' => 'clientAuth']);
+$routes->post('client/depot', 'ClientController::addDepot', ['filter' => 'clientAuth']);
+$routes->post('client/retrait', 'ClientController::addRetrait', ['filter' => 'clientAuth']);
+$routes->get('client/transfert', 'ClientController::goToTransfert', ['filter' => 'clientAuth']);
+$routes->get('client/historique', 'ClientController::goToHistorique', ['filter' => 'clientAuth']);
+$routes->post('client/transfert', 'ClientController::addTransfert', ['filter' => 'clientAuth']);
+
+
 $routes->get('operateur/espace', 'OperateurController::dashboard', ['filter' => 'operateurAuth']);
 
 $routes->get('operateur/goToprefixe', 'OperateurController::goToPrefixe', ['filter' => 'operateurAuth']);

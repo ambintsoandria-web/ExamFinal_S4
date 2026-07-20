@@ -84,3 +84,7 @@ CREATE INDEX idx_transactions_client ON transactions(client_id);
 CREATE INDEX idx_clients_telephone ON clients(telephone);
 
 CREATE INDEX idx_operateurs_telephone ON operateurs(telephone);
+
+
+
+SELECT * FROM transactions JOIN types_operations ON transactions.type_operation_id = types_operations.id WHERE transactions.client_id = 1;

@@ -20,6 +20,12 @@
 </head>
 
 <body>
+    <?php
+    $authType = session('auth_type');
+    $isOperateur = $authType === 'operateur';
+    $isClient = $authType === 'client';
+    $homeUrl = $isOperateur ? site_url('operateur/espace') : site_url('client/espace');
+    ?>
 
     <!-- ============================================
      OVERLAY (mobile)
@@ -35,7 +41,7 @@
             <i class="bi bi-list"></i>
         </button>
 
-        <a href="<?= base_url('dashboard') ?>" class="brand">
+        <a href="<?= $homeUrl ?>" class="brand">
             <span class="brand-mark"><i class="bi bi-phone"></i></span>
             Mobile Money
         </a>
@@ -45,15 +51,16 @@
                 <div class="avatar">
                     <?= esc(strtoupper(substr(session('auth_nom') ?? 'OP', 0, 2))) ?>
                 </div>
-                <span><?= esc(session('auth_nom') ?? 'Opérateur') ?></span>
+                <span>
+                    <?= esc(session('auth_nom') ?? ($isClient ? 'Client' : 'Opérateur')) ?>
+                    <small class="nav-role"><?= $isClient ? 'Client' : 'Opérateur' ?></small>
+                </span>
             </div>
             <form action="<?= site_url('deconnexion') ?>" method="post" class="logout-form">
                 <?= csrf_field() ?>
-                <a href="<?=  site_url('/deconnexion') ?>">
-                    <button type="submit" class="logout-btn" aria-label="Se déconnecter" title="Se déconnecter">
-                        <i class="bi bi-box-arrow-right"></i>
-                    </button>
-                </a>
+                <button type="submit" class="logout-btn" aria-label="Se déconnecter" title="Se déconnecter">
+                    <i class="bi bi-box-arrow-right"></i>
+                </button>
             </form>
         </div>
     </nav>
@@ -62,36 +69,81 @@
      SIDEBAR (menu latéral)
      ============================================ -->
     <aside class="sidebar" id="sidebar">
-        <div class="sidebar-label">Menu principal</div>
+        <div class="sidebar-label"><?= $isClient ? 'Mon espace' : 'Administration' ?></div>
         <ul class="sidebar-menu">
-            <li>
-                <a href="<?= site_url('operateur/prefixes') ?>"
-                    class="<?= ($active ?? '') == 'prefixes' ? 'active' : '' ?>">
-                    <i class="bi bi-hash"></i>
-                    Préfixes
-                </a>
-            </li>
-            <li>
-                <a href="<?= base_url('operateur/frais') ?>"
-                    class="<?= ($active ?? '') == 'frais' ? 'active' : '' ?>">
-                    <i class="bi bi-currency-dollar"></i>
-                    Frais
-                </a>
-            </li>
-            <li>
-                <a href="<?= base_url('operateur/clients') ?>"
-                    class="<?= ($active ?? '') == 'clients' ? 'active' : '' ?>">
-                    <i class="bi bi-people"></i>
-                    Clients
-                    <span class="badge"><?= $total_clients ?? 0 ?></span>
-                </a>
-            </li>
-            <li>
-                <a href="<?= base_url('operateur/gains') ?>" class="<?= ($active ?? '') == 'gains' ? 'active' : '' ?>">
-                    <i class="bi bi-graph-up-arrow"></i>
-                    Gains
-                </a>
-            </li>
+            <?php if ($isClient): ?>
+                <li>
+                    <a href="<?= site_url('client/espace') ?>"
+                        class="<?= ($active ?? 'dashboard') === 'dashboard' ? 'active' : '' ?>">
+                        <i class="bi bi-grid"></i>
+                        Tableau de bord
+                    </a>
+                </li>
+                <li>
+                    <a href="<?= site_url('client/depot') ?>" class="<?= ($active ?? '') === 'depot' ? 'active' : '' ?>">
+                        <i class="bi bi-arrow-down-circle"></i>
+                        Faire un dépôt
+                    </a>
+                </li>
+                <li>
+                    <a href="<?= site_url('client/retrait') ?>"
+                        class="<?= ($active ?? '') === 'retrait' ? 'active' : '' ?>">
+                        <i class="bi bi-arrow-up-circle"></i>
+                        Faire un retrait
+                    </a>
+                </li>
+                <li>
+                    <a href="<?= site_url('client/transfert') ?>"
+                        class="<?= ($active ?? '') === 'transfert' ? 'active' : '' ?>">
+                        <i class="bi bi-arrow-left-right"></i>
+                        Faire un transfert
+                    </a>
+                </li>
+                <li>
+                    <a href="<?= site_url('client/historique') ?>"
+                        class="<?= ($active ?? '') === 'transfert' ? 'active' : '' ?>">
+                        <i class="bi bi-arrow-left-right"></i>
+                        Voir l'historique
+                    </a>
+                </li>
+
+
+            <?php elseif ($isOperateur): ?>
+                <li>
+                    <a href="<?= site_url('operateur/espace') ?>"
+                        class="<?= ($active ?? '') === 'dashboard' ? 'active' : '' ?>">
+                        <i class="bi bi-grid"></i>
+                        Tableau de bord
+                    </a>
+                </li>
+                <li>
+                    <a href="<?= site_url('operateur/prefixes') ?>"
+                        class="<?= ($active ?? '') == 'prefixes' ? 'active' : '' ?>">
+                        <i class="bi bi-hash"></i>
+                        Préfixes
+                    </a>
+                </li>
+                <li>
+                    <a href="<?= base_url('operateur/frais') ?>" class="<?= ($active ?? '') == 'frais' ? 'active' : '' ?>">
+                        <i class="bi bi-currency-dollar"></i>
+                        Frais
+                    </a>
+                </li>
+                <li>
+                    <a href="<?= base_url('operateur/clients') ?>"
+                        class="<?= ($active ?? '') == 'clients' ? 'active' : '' ?>">
+                        <i class="bi bi-people"></i>
+                        Clients
+                        <span class="badge"><?= $total_clients ?? 0 ?></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="<?= base_url('operateur/gains') ?>" class="<?= ($active ?? '') == 'gains' ? 'active' : '' ?>">
+                        <i class="bi bi-graph-up-arrow"></i>
+                        Gains
+                    </a>
+                </li>
+            <?php endif; ?>
         </ul>
 
         <!-- Version -->
@@ -134,4 +186,5 @@
         });
     </script>
 </body>
+
 </html>
