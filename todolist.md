@@ -26,12 +26,12 @@
     ## Operateur (Alan):
         . (ok)Front:
             .. (ok)Email
+            .. (ok)Mot de passe
             .. (ok)bouton valider
         . (ok)Services:
-            .. (ok)isNumeroValide
-            .. (ok)login
+            .. (ok)authenticate par mdp et identifiant
         . (ok)Controllers:
-            .. (ok)ClientController:
-                ...(ok)/
-                ...(ok)connexion
-                ...(ok)connexion client
+            .. (ok)OperateurController:
+                ...(ok)connexion/operateur
+                ...(ok)connexion/operateur(post)
+                ...(ok)deconnexion
