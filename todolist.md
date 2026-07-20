@@ -1,0 +1,11 @@
+# creation de la base de donnée : 
+- > creation des tables : 
+    -utilisateurs
+    -roles
+    -utilisateur_roles
+    -comptes_clients
+    -types_operations
+    -frais
+    -transactions
+    -transferts
+    -prefixes
