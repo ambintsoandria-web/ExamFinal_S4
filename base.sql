@@ -22,7 +22,13 @@ CREATE TABLE clients (
     actif INTEGER DEFAULT 1,
     date_creation DATETIME DEFAULT CURRENT_TIMESTAMP
 );
-
+create table client_solde_historique (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    client_id INTEGER NOT NULL,
+    solde_precedent REAL NOT NULL,
+    date_modification DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (client_id) REFERENCES clients(id)
+);
 -- =============================================
 -- 3. TYPES D'OPERATIONS
 -- =============================================

@@ -12,6 +12,8 @@ use App\Models\TransactionsModel;
 use App\Models\FraisModel;
 use App\Models\TransfertModel;
 
+use App\Models\TransactionModel;
+use App\Models\ClientSoldeHistorique;
 
 class ClientController extends BaseController
 {
@@ -20,6 +22,8 @@ class ClientController extends BaseController
 
     protected FraisModel $fraisModel;
     protected TransfertModel $transfertModel;
+    public TransactionModel $transactionModel;
+    public ClientSoldeHistorique $clientSoldeHistorique;
 
 
     public function __construct()
@@ -28,6 +32,8 @@ class ClientController extends BaseController
         $this->transactionsModel = new TransactionsModel();
         $this->fraisModel = new FraisModel();
         $this->transfertModel = new TransfertModel();
+        $this->transactionModel = new TransactionModel();
+        $this->clientSoldeHistorique = new ClientSoldeHistorique();
     }
     public function goToHistorique()
     {
@@ -144,5 +150,18 @@ class ClientController extends BaseController
             'title' => 'Mon espace client',
             'active' => 'dashboard',
         ]);
+    }
+    public function logout()
+    {
+        session()->destroy();
+        return redirect()->to(site_url('/'))->with('succes', 'Vous avez été déconnecté avec succès.');
+    }
+    public function getSituationClients(){
+        $clients = $this->clientModel->findAll();
+        $date = date('Y-m-d H:i:s');
+        foreach ($clients as &$client) {
+            $client['solde'] = $this->clientSoldeHistorique->getSoldebyClient($client['id'], $date);
+        }
+        return view('Client/situation', ['clients' => $clients]);
     }
 }
