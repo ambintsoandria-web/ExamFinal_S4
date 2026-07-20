@@ -35,3 +35,13 @@
                 ...(ok)connexion/operateur
                 ...(ok)connexion/operateur(post)
                 ...(ok)deconnexion
+# Page depot (Ambinintsoa)
+    ## Tableau de bord
+        . (ok) Front : 
+            .. (ok) Affichage du solde restant
+        
+    ## Pages d'actions du client
+        . (ok) Faire un depot
+        . (ok) Faire un retrait 
+        . (ok) Faire un transfert 
+        . (ok) Voir historique
