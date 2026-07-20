@@ -67,10 +67,10 @@
                 </a>
             </li>
             <li>
-                <a href="<?= base_url('operateur/operations') ?>"
-                    class="<?= ($active ?? '') == 'operations' ? 'active' : '' ?>">
-                    <i class="bi bi-arrow-left-right"></i>
-                    Opérations
+                <a href="<?= base_url('operateur/frais') ?>"
+                    class="<?= ($active ?? '') == 'frais' ? 'active' : '' ?>">
+                    <i class="bi bi-currency-dollar"></i>
+                    Frais
                 </a>
             </li>
             <li>
